@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from '../public/HomepageBanner.png'
+import Banner from '../public/HomePageBanner.png'
 import Facebook from '../public/social media/facebook.svg'
 import Tiktok from '../public/social media/tiktok.svg'
 import Instagram from '../public/social media/instagram.svg'
