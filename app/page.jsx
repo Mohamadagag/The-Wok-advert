@@ -62,7 +62,7 @@ export default function Home() {
 
       {/* Desktop */}
       <div className=" relative hidden lg:block">
-        <div>
+        <>
           <Image src={BuildYourOwnWokBottom} alt="Build Your Own Wok Bottom" className="w-full object-cover" />
               <div className="absolute bottom-[32%] pl-5 2xl:bottom-[35%] 2xl:pl-12">
                 <div className="text-white">
@@ -73,14 +73,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-        </div>
+        </>
       </div>
 
     {/* Secion */}
     <div className="relative">
       <div className="w-full flex justify-center">
-      <Image src={MobileVector} className="block lg:hidden"/>
-      <Image src={Think} className="hidden lg:block"/>
+      <Image src={MobileVector} className="block lg:hidden" alt="Think Inside The Box"/>
+      <Image src={Think} className="hidden lg:block" alt="Think Inside The Box"/>
       </div>
         <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[34%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[41%] md:left-[20%] lg:left-[25%] lg:top-[30%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[35%] bggersc">
           <div className=" text-center">
