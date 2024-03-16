@@ -2,7 +2,7 @@ import React from 'react'
 
 const FranchisePage = () => {
   return (
-    <div className='text-white'>Franchise Page</div>
+    <main className='text-white background-img'>Franchise Page</main>
   )
 }
 

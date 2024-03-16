@@ -1,6 +1,6 @@
 const LocationsPage = () => {
   return (
-    <div className="text-white">Locations Page</div>
+    <main className="text-white background-img">Locations Page</main>
   )
 }
 

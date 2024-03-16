@@ -11,10 +11,11 @@ import MobileVector from '../public/mobile.png'
 import Think from '../public/ThinkInsideTheBox.png'
 import MobileRed from '../public/MobileRed.png'
 import Woked from '../public/Woked.png'
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-  <main className="relative">
+  <main className="relative background-img">
     {/* Secion */}
     <div className="relative">
       <Image src={Banner} alt="Home Page Banner" className="object-cover w-full"/>
@@ -108,5 +109,7 @@ export default function Home() {
       <div className="w-full">
       <Image src={Hungry} alt="Hungry Banner" className="object-cover w-full"/>
       </div>
+
+      <Footer />
   </main>);
 }

@@ -10,11 +10,17 @@ import Facebook from '../public/social media/facebook.svg'
 import Tiktok from '../public/social media/tiktok.svg'
 import Instagram from '../public/social media/instagram.svg'
 import Youtube from '../public/social media/youtube.svg'
+import { SlArrowDown } from "react-icons/sl";
+import { SlArrowUp } from "react-icons/sl";
+
+
 
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isCareersOpen, setIsCareersOpen] = useState(false);
+  const [isTalkToUsOpen, setIsTalkToUsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -31,10 +37,81 @@ const Navbar = () => {
        </div>
        <div>
         <Link href="/about" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>About Us</Link>
-        <Link href="/careers" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Careers</Link>
+
+        <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsCareersOpen(false)}>
+            <div className="relative inline">
+
+            {isCareersOpen ? (
+               <button
+               onClick={() => setIsCareersOpen(!isCareersOpen)}
+               className="text-white px-4 py-2 rounded"
+             >
+                <div className='flex items-baseline'>Careers<SlArrowUp className='text-xs ml-2' /></div>
+             </button>
+                  
+            ) : <button
+            onClick={() => setIsCareersOpen(!isCareersOpen)}
+            className="text-white px-4 py-2 rounded"
+          >
+             <div className='flex items-baseline'>Careers<SlArrowDown className='text-xs ml-2' /></div>
+          </button> }
+            
+
+              {isCareersOpen && (
+                <div
+                  className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-32 rounded-md shadow-lg"
+                  onMouseLeave={() => setIsCareersOpen(false)}
+                >
+                  <div className="py-1 rounded-md bg-[#171717] shadow-xs">
+                    <Link href="/careers/join-us" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsCareersOpen(false)} >Join Us</Link>
+                    <Link href="/careers/our-family" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsCareersOpen(false)} >Our Family</Link>
+                  </div>
+                </div>
+              )}
+            </div>
+        </div>
+
         <Link href="/franchise" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Franchise</Link>
         <Link href="/locations" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Locations</Link>
-        <Link href="/talktous" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Talk To Us</Link>
+
+
+                {/* Hereeeeeeeeeeeeeeeee */}
+
+        <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsTalkToUsOpen(false)}>
+            <div className="relative inline">
+
+            {isTalkToUsOpen ? (
+               <button
+               onClick={() => setIsTalkToUsOpen(!isTalkToUsOpen)}
+               className="text-white px-4 py-2 rounded"
+             >
+                <div className='flex items-baseline'>Talk To Us<SlArrowUp className='text-xs ml-2' /></div>
+             </button>
+                  
+            ) : <button
+            onClick={() => setIsTalkToUsOpen(!isTalkToUsOpen)}
+            className="text-white px-4 py-2 rounded"
+          >
+             <div className='flex items-baseline'>Talk To Us<SlArrowDown className='text-xs ml-2' /></div>
+          </button> }
+            
+
+              {isTalkToUsOpen && (
+                <div
+                  className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-36 rounded-md shadow-lg"
+                  onMouseLeave={() => setIsTalkToUsOpen(false)}
+                >
+                  <div className="py-1 rounded-md bg-[#171717] shadow-xs">
+                    <Link href="/talktous/message-us" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsTalkToUsOpen(false)} >Message Us</Link>
+                    <Link href="/talktous/feedback" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsTalkToUsOpen(false)} >Feedback</Link>
+                  </div>
+                </div>
+              )}
+            </div>
+        </div>
+
+        
+        {/* <Link href="/talktous" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Talk To Us</Link> */}
         <a href="https://heylink.me/thewok?fbclid=PAAaYSf8A7ru06PtyFji2jlUjyRlGCMm6042dVv2pJMevReWJ-uf3j0Eae6ko" target='_blank' className='lg:text-[#B61414] lg:tracking-[0.25px] lg:text-xl font-semibold'>Order Now</a>
        </div>
        <div className='lg:flex lg:items-center lg:text-white'>

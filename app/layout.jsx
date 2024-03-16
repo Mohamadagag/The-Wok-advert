@@ -1,9 +1,6 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "The Wok",
@@ -13,10 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#111010] background-img">
+      <body className="bg-[#111010]">
         <Navbar />
           {children}
-        <Footer />
         </body>
     </html>
   );
