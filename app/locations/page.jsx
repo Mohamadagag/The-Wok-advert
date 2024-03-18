@@ -27,7 +27,6 @@ const locations = [
 const LocationsPage = () => {
 
   const [activeLocation, setActiveLocation] = useState(locations[0])
-  const [isOpen, setIsOpen] = useState(true);
 
 
   const changeNextLocation = () => {

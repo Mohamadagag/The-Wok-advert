@@ -1,7 +1,6 @@
 import FamilyCard from '@/components/FamilyCard'
 import Footer from '@/components/Footer'
 import RedSocialMediaIcons from '@/components/RedSocialMediaIcons'
-import React from 'react'
 
 const Ourfamily = () => {
   return (
