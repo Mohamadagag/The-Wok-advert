@@ -38,13 +38,12 @@ export default function Home() {
         <p className="2xl:font-light 2xl:text-2xl 2xl:mb-6 text-justify 2xl:leading-9">We're not your average spot – we're the trendsetters, bringing that authentic street food experience straight to your taste buds.</p>
         <p className="2xl:font-light 2xl:text-2xl 2xl:text-justify  2xl:leading-9">We're all about quality and flavor, using only the freshest ingredients and staying true to Asian culinary traditions. Each bite is a burst of excitement that'll have you hooked from the first taste.</p>
       </div>  
-      <div className="w-40 mt-10 md:ml-10  2xl:min-w-max">
+      <div className="w-48 md:w-fit md:mt-0  mt-10 md:ml-10  2xl:min-w-max">
         <Image src={OurStory} alt="Our Story" className="object-cover" />
       </div>
     </div>
 
       {/* Secion */}
-      {/* Mobile Problems*/}
         <div className="2xl:pt-16 relative lg:hidden">
         <div className=" mb-10">
           <Image src={MobileRed} alt="Build Your Own Wok Bottom" className="w-full object-cover" />
@@ -80,7 +79,9 @@ export default function Home() {
     {/* Secion */}
     <div className="relative">
       <div className="w-full flex justify-center">
+        <div>
       <Image src={MobileVector} className="block lg:hidden" alt="Think Inside The Box"/>
+        </div>
       <Image src={Think} className="hidden lg:block" alt="Think Inside The Box"/>
       </div>
         <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[34%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[41%] md:left-[20%] lg:left-[25%] lg:top-[30%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[35%] bggersc">
@@ -92,7 +93,7 @@ export default function Home() {
       </div>
 
     {/* Section */}
-    <div className="flex flex-col lg:flex-row justify-between items-center mb-10 px-4 lg:px-8 2xl:px-28">
+    <div className="flex flex-col md:flex-row justify-between items-center mb-10 px-4 lg:px-8 2xl:px-28">
       <div className="max-w-xs mr-3 md:max-w-sm xl:max-w-none">
         <h2 className="text-red-800 font-bold text-2xl mb-3 sm:text-3xl sm:mb-4 md:text-4xl xl:max-w-sm 2xl:text-5xl 2xl:max-w-[26rem] 2xl:mb-16">Noodles Wok'd to Perfection</h2>
         <div className="xl:max-w-md 2xl:max-w-[34rem] font-light">
