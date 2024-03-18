@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
     {/* Desktop Navigation*/}
-    <nav className="hidden h-[87px] xl:flex items-center justify-between px-24 bg-black">
+    <nav className="hidden h-[87px] xl:flex items-center justify-between px-10 bg-black">
        <div>
         <Link href="/">
           <Image src={Logo} alt='The Wok Logo'/>
@@ -75,8 +75,6 @@ const Navbar = () => {
         <Link href="/locations" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Locations</Link>
 
 
-                {/* Hereeeeeeeeeeeeeeeee */}
-
         <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsTalkToUsOpen(false)}>
             <div className="relative inline">
 
@@ -109,9 +107,6 @@ const Navbar = () => {
               )}
             </div>
         </div>
-
-        
-        {/* <Link href="/talktous" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Talk To Us</Link> */}
         <a href="https://heylink.me/thewok?fbclid=PAAaYSf8A7ru06PtyFji2jlUjyRlGCMm6042dVv2pJMevReWJ-uf3j0Eae6ko" target='_blank' className='lg:text-[#B61414] lg:tracking-[0.25px] lg:text-xl font-semibold'>Order Now</a>
        </div>
        <div className='lg:flex lg:items-center lg:text-white'>
@@ -122,9 +117,14 @@ const Navbar = () => {
        </div>
     </nav>
 
+
+
+
+    
+
     {/* Mobile SideNav */}
     <div className='xl:hidden'>
-      <nav className=' bg-black flex justify-between items-center px-10 py-5 xl:hidden'>
+      <nav className=' bg-black flex justify-between items-center p-6 lg:px-10 py-5 xl:hidden'>
         <div className='w-24'>
           <Link href="/">
             <Image src={Logo} alt='The Wok Logo'/>
@@ -139,18 +139,28 @@ const Navbar = () => {
           <div className="bg-red-900 w-64 h-full fixed left-0 top-0 overflow-auto z-50 p-6 flex flex-col justify-between">
               <div className='flex flex-col'>
                 <Link href="/about" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>About Us</Link>
-                <Link href="/careers" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Careers</Link>
+                <Link href="/careers/join-us" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Join Us</Link>
+                <Link href="/careers/our-family" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Our Family</Link>
                 <Link href="/franchise" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Franchise</Link>
                 <Link href="/locations" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Locations</Link>
-                <Link href="/talktous" className='text-white mr-10 tracking-[0.25px] text-xl'>Talk To Us</Link>
+                <Link href="/talktous/message-us" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Message Us</Link>
+                <Link href="/talktous/feedback" className='text-white mr-10 tracking-[0.25px] text-xl'>Feedback</Link>
                 <a href="https://heylink.me/thewok?fbclid=PAAaYSf8A7ru06PtyFji2jlUjyRlGCMm6042dVv2pJMevReWJ-uf3j0Eae6ko" target='_blank' className='mt-5 text-white mr-10 tracking-[0.25px] text-xl'>Order Now</a>
               </div>
               <div>
-                <div className="2xl:flex 2xl:flex-col 2xl:absolute 2xl:bottom-12 2xl:left-6">
-                  <a href="https://www.facebook.com/thewoklb" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4"><Image src={Facebook} alt="Facebook" /></a>
-                  <a href="https://www.tiktok.com/@thewokarabia" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4"><Image src={Tiktok} alt="Tiktok" /></a>
-                  <a href="https://www.instagram.com/thewokarabia" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4"><Image src={Instagram} alt="Instagram" /></a>
-                  <a href="http://www.youtube.com/@thewokarabia" target='_blank' className="inline-block"><Image src={Youtube} alt="Youtube" /></a>
+                <div className="flex items-center absolute bottom-12 left-6">
+                  <a href="https://www.facebook.com/thewoklb" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4">
+                    <Image src={Facebook} alt="Facebook" />
+                    </a>
+                  <a href="https://www.tiktok.com/@thewokarabia" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4">
+                    <Image src={Tiktok} alt="Tiktok" />
+                    </a>
+                  <a href="https://www.instagram.com/thewokarabia" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4">
+                    <Image src={Instagram} alt="Instagram" />
+                    </a>
+                  <a href="http://www.youtube.com/@thewokarabia" target='_blank' className="w-10 inline-block">
+                    <Image src={Youtube} alt="Youtube" />
+                    </a>
                 </div>
               </div>
             </div>

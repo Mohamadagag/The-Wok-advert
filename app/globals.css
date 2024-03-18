@@ -33,8 +33,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   height: calc(100vh - 6rem - 87px);
+}
+
+.location-height {
+  height: calc(100vh - 87px);
 }
 
 @media screen and (max-width: 1440px) {

@@ -5,7 +5,7 @@ const MessageUs = () => {
     <>
     <main className="message-bg px-5 pt-16">
         <div>
-          <h1 className="text-[#D87F35] text-5xl font-bold tracking-wide mb-10 text-center lg:text-7xl">MESSAGE US</h1>
+          <h1 className="text-white text-5xl font-bold tracking-wide mb-10 text-center lg:text-7xl">MESSAGE <span className="text-[#970000]">US</span></h1>
           {/* Form */}
           <>
             <form className="text-white lg:max-w-4xl lg:mx-auto">

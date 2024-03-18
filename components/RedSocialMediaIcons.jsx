@@ -9,10 +9,18 @@ const RedSocialMediaIcons = () => {
     <div className='hidden xl:block'>
 
     <div className="absolute top-1/2">
+      <a href="https://www.facebook.com/thewoklb" target='_blank'>
         <Image className='mb-3' src={Facebook} alt='Facebook Icon' />
+      </a>
+      <a href="https://www.tiktok.com/@thewokarabia" target='_blank'>
         <Image className='mb-3' src={Tiktok} alt='Tiktik Icon' />
+      </a>
+      <a href="https://www.instagram.com/thewokarabia" target='_blank'>
         <Image className='mb-3' src={Instagram} alt='Instagram Icon' />
+      </a>
+      <a href="http://www.youtube.com/@thewokarabia" target='_blank'>
         <Image src={Youtube} alt='Youtube Icon' />
+      </a>
     </div>
     </div>
   )
