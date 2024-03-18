@@ -3,7 +3,7 @@ import Footer from "@/components/Footer"
 const MessageUs = () => {
   return (
     <>
-    <main className="message-bg px-5 pt-16">
+    <main className="message-bg px-5 pt-16 mt-[93px] xl:mt-[87px]">
         <div>
           <h1 className="text-white text-5xl font-bold tracking-wide mb-10 text-center lg:text-7xl">MESSAGE <span className="text-[#970000]">US</span></h1>
           {/* Form */}

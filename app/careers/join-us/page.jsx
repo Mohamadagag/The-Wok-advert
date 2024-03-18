@@ -4,7 +4,7 @@ import TeamCard from '@/components/TeamCard'
 
 const JoinUs = () => {
   return (
-    <div className='background-img'>
+    <div className='background-img mt-[93px] xl:mt-[87px]'>
       <main className='p-5 mb-1 lg:mb-10 2xl:mb-16 relative'>
        
         <div className='flex flex-col items-center xl:items-start my-5 xl:px-16'>

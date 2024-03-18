@@ -15,14 +15,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-  <main className="relative background-img">
+  <main className="relative background-img mt-[85px] xl:mt-[87px]">
     {/* Secion */}
     <div className="relative">
       <Image src={Banner} alt="Home Page Banner" className="object-cover w-full"/>
       <div className="absolute order-btn-container">
       <button className="bg-[#B61414] text-sm order-btn rounded-full text-white ">ORDER NOW</button>
       </div>
-      <div className="hidden xl:flex xl:flex-col xl:absolute xl:bottom-12 xl:left-6">
+      <div className="hidden xl:flex xl:flex-col xl:fixed xl:bottom-1/2 xl:right-9 z-[80]">
         <a href="https://www.facebook.com/thewoklb" target='_blank' className="inline-block xl:mb-2 2xl:mb-5"><Image src={Facebook} alt="Facebook" /></a>
         <a href="https://www.tiktok.com/@thewokarabia" target='_blank' className="inline-block xl:mb-2 2xl:mb-5"><Image src={Tiktok} alt="Tiktok" /></a>
         <a href="https://www.instagram.com/thewokarabia" target='_blank' className="inline-block xl:mb-2 2xl:mb-5"><Image src={Instagram} alt="Instagram" /></a>
@@ -92,7 +92,7 @@ export default function Home() {
       </div>
 
     {/* Section */}
-    <div className="flex justify-between items-center mb-10 px-4 lg:px-8 2xl:px-28">
+    <div className="flex flex-col lg:flex-row justify-between items-center mb-10 px-4 lg:px-8 2xl:px-28">
       <div className="max-w-xs mr-3 md:max-w-sm xl:max-w-none">
         <h2 className="text-red-800 font-bold text-2xl mb-3 sm:text-3xl sm:mb-4 md:text-4xl xl:max-w-sm 2xl:text-5xl 2xl:max-w-[26rem] 2xl:mb-16">Noodles Wok'd to Perfection</h2>
         <div className="xl:max-w-md 2xl:max-w-[34rem] font-light">
@@ -100,7 +100,7 @@ export default function Home() {
         <p className="text-white xl:text-xl 2xl:text-2xl">Let's wok and roll.</p>
         </div>
       </div>
-      <div className="md:max-w-sm xl:max-w-lg 2xl:max-w-full">
+      <div className="max-w-[25rem] 2xl:max-w-full">
         <Image src={Woked} alt="Woked" className="object-cover" />
       </div>
     </div>

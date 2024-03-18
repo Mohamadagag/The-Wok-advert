@@ -4,7 +4,7 @@ import RedSocialMediaIcons from '@/components/RedSocialMediaIcons'
 
 const Ourfamily = () => {
   return (
-    <div className='background-img'>
+    <div className='background-img mt-[93px] xl:mt-[87px]'>
         <main className='p-5 mb-10 2xl:mb-[7.5rem] relative'>
           <div className='flex flex-col items-center'>
             <div className='xl:w-[80%]'>

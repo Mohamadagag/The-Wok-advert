@@ -43,7 +43,7 @@ const LocationsPage = () => {
 
 
   return (
-<main className="relative h-full">
+<main className="relative h-full mt-[93px] xl:mt-[87px]">
   <div className="w-full location-height">
     <div
       className="h-full"

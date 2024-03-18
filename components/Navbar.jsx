@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
     {/* Desktop Navigation*/}
-    <nav className="hidden h-[87px] xl:flex items-center justify-between px-10 bg-black">
+    <nav className="hidden h-[87px] xl:flex items-center justify-between px-10 fixed top-0 left-0 right-0 z-[999999] bg-[#111010]">
        <div>
         <Link href="/">
           <Image src={Logo} alt='The Wok Logo'/>
@@ -123,7 +123,7 @@ const Navbar = () => {
     
 
     {/* Mobile SideNav */}
-    <div className='xl:hidden'>
+    <div className='xl:hidden h-[80px] fixed top-0 left-0 right-0 z-[999999] bg-[#111010]'>
       <nav className=' bg-black flex justify-between items-center p-6 lg:px-10 py-5 xl:hidden'>
         <div className='w-24'>
           <Link href="/">
