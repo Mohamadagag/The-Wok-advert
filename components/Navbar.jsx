@@ -59,12 +59,12 @@ const Navbar = () => {
 
               {isCareersOpen && (
                 <div
-                  className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-32 rounded-md shadow-lg"
+                  className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-44 rounded-md shadow-lg"
                   onMouseLeave={() => setIsCareersOpen(false)}
                 >
                   <div className="py-1 rounded-md bg-[#171717] shadow-xs">
-                    <Link href="/careers/join-us" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsCareersOpen(false)} >Join Us</Link>
-                    <Link href="/careers/our-family" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsCareersOpen(false)} >Our Family</Link>
+                    <Link href="/careers/join-us" className="rounded text-[#484848] block px-4  py-2 text-sm hover:bg-[#212020] hover:text-white hover:border border-[#970000]"  onClick={() => setIsCareersOpen(false)} >Join Us</Link>
+                    <Link href="/careers/our-family" className="rounded text-[#484848] block px-4  py-2 text-sm hover:bg-[#212020] hover:text-white  hover:border border-[#970000]"  onClick={() => setIsCareersOpen(false)} >Our Family</Link>
                   </div>
                 </div>
               )}
@@ -96,12 +96,12 @@ const Navbar = () => {
 
               {isTalkToUsOpen && (
                 <div
-                  className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-36 rounded-md shadow-lg"
+                  className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-44 rounded-md shadow-lg"
                   onMouseLeave={() => setIsTalkToUsOpen(false)}
                 >
                   <div className="py-1 rounded-md bg-[#171717] shadow-xs">
-                    <Link href="/talktous/message-us" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsTalkToUsOpen(false)} >Message Us</Link>
-                    <Link href="/talktous/feedback" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white"  onClick={() => setIsTalkToUsOpen(false)} >Feedback</Link>
+                    <Link href="/talktous/message-us" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white  hover:border border-[#970000]"  onClick={() => setIsTalkToUsOpen(false)} >Message Us</Link>
+                    <Link href="/talktous/feedback" className="rounded text-[#484848] block px-4 py-2 text-sm hover:bg-[#212020] hover:text-white  hover:border border-[#970000]"  onClick={() => setIsTalkToUsOpen(false)} >Feedback</Link>
                   </div>
                 </div>
               )}

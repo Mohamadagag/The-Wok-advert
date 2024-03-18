@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       <Image src={Think} className="hidden lg:block" alt="Think Inside The Box"/>
       </div>
-        <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[34%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[41%] md:left-[20%] lg:left-[25%] lg:top-[30%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[35%] bggersc">
+        <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[34%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[41%] md:left-[17%] lg:left-[25%] lg:top-[30%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[35%] bggersc">
           <div className=" text-center">
           <h2 className=" text-red-800 font-bold text-2xl mb-1 max-w-[14ch] md:text-4xl md:mb-5">THINK INSIDE THE BOX</h2>
           </div>

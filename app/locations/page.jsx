@@ -55,7 +55,7 @@ const LocationsPage = () => {
     />
   </div>
   <div className="bg-[#1E1E1E] text-white lg:rounded-t-xl h-10 bottom-0 lg:absolute left-0 right-0 mx-auto my-auto min-h-[140px] lg:max-w-[70rem] font-light tracking-wide text-xl flex-col lg:flex-row">
-    <div className="flex justify-between px-8 lg:p-8 py-5 flex-col lg:flex-row">
+    <div className="flex justify-between px-8 py-5 flex-col lg:flex-row">
       <div>
         <div className='flex items-center'>
           <span className='w-[1.3rem]'>

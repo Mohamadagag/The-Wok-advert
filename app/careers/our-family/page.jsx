@@ -1,13 +1,15 @@
 import FamilyCard from '@/components/FamilyCard'
 import Footer from '@/components/Footer'
-import RedSocialMediaIcons from '@/components/RedSocialMediaIcons'
+import SocialMediaIcons from '@/components/SocialMediaIcons'
 
 const Ourfamily = () => {
   return (
+    <>
+         <SocialMediaIcons />
     <div className='background-img mt-[93px] xl:mt-[87px]'>
         <main className='p-5 mb-10 2xl:mb-[7.5rem] relative'>
           <div className='flex flex-col items-center'>
-            <div className='xl:w-[80%]'>
+            <div className='xl:w-[93%]'>
              
               <div className='flex flex-col items-center xl:items-start my-5'>
                   <h1 className='font-bold text-white text-4xl' >MEET OUR</h1>
@@ -22,12 +24,13 @@ const Ourfamily = () => {
             </div>
           </div>
 
-          <RedSocialMediaIcons />
+          {/* <SocialMediaIcons /> */}
         </main>
 
 
         <Footer />
     </div>
+    </>
   )
 }
 

@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
@@ -10,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#111010]">
+      <body className="bg-[#111010] relative">
         <Navbar />
           {children}
         </body>

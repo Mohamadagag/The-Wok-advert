@@ -1,9 +1,12 @@
 import Footer from '@/components/Footer'
-import RedSocialMediaIcons from '@/components/RedSocialMediaIcons'
+import SocialMediaIcons from '@/components/SocialMediaIcons'
 import TeamCard from '@/components/TeamCard'
 
 const JoinUs = () => {
   return (
+    <>
+        <SocialMediaIcons />
+        
     <div className='background-img mt-[93px] xl:mt-[87px]'>
       <main className='p-5 mb-1 lg:mb-10 2xl:mb-16 relative'>
        
@@ -23,11 +26,12 @@ const JoinUs = () => {
           </div>
         </div>
 
-        <RedSocialMediaIcons />
+        {/* <SocialMediaIcons /> */}
       </main>
 
         <Footer />
     </div>
+    </>
   )
 }
 
