@@ -40,6 +40,36 @@
   height: calc(100vh - 87px);
 }
 
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s forwards;
+}
+
 @media screen and (max-width: 1440px) {
   .message-bg {
     background-image: url("../public/bg.png");

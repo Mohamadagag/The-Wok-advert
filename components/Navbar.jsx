@@ -136,7 +136,7 @@ const Navbar = () => {
       </nav>
       {isOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 z-50" onClick={toggleNav}>
-          <div className="bg-red-900 w-64 h-full fixed left-0 top-0 overflow-auto z-50 p-6 flex flex-col justify-between">
+          <div className="animate-slide-in bg-red-900 w-64 h-full fixed left-0 top-0 overflow-auto z-50 p-6 flex flex-col justify-between">
               <div className='flex flex-col'>
                 <Link href="/about" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>About Us</Link>
                 <Link href="/careers/join-us" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Join Us</Link>
@@ -164,7 +164,6 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
         </div>
       )}
     </div>
