@@ -44,16 +44,16 @@ const Navbar = () => {
             {isCareersOpen ? (
                <button
                onClick={() => setIsCareersOpen(!isCareersOpen)}
-               className="text-white px-4 py-2 rounded"
+               className="px-4 py-2 text-white rounded"
              >
-                <div className='flex items-baseline'>Careers<SlArrowUp className='text-xs ml-2' /></div>
+                <div className='flex items-baseline'>Careers<SlArrowUp className='ml-2 text-xs' /></div>
              </button>
                   
             ) : <button
             onClick={() => setIsCareersOpen(!isCareersOpen)}
-            className="text-white px-4 py-2 rounded"
+            className="px-4 py-2 text-white rounded"
           >
-             <div className='flex items-baseline'>Careers<SlArrowDown className='text-xs ml-2' /></div>
+             <div className='flex items-baseline'>Careers<SlArrowDown className='ml-2 text-xs' /></div>
           </button> }
             
 
@@ -81,16 +81,16 @@ const Navbar = () => {
             {isTalkToUsOpen ? (
                <button
                onClick={() => setIsTalkToUsOpen(!isTalkToUsOpen)}
-               className="text-white px-4 py-2 rounded"
+               className="px-4 py-2 text-white rounded"
              >
-                <div className='flex items-baseline'>Talk To Us<SlArrowUp className='text-xs ml-2' /></div>
+                <div className='flex items-baseline'>Talk To Us<SlArrowUp className='ml-2 text-xs' /></div>
              </button>
                   
             ) : <button
             onClick={() => setIsTalkToUsOpen(!isTalkToUsOpen)}
-            className="text-white px-4 py-2 rounded"
+            className="px-4 py-2 text-white rounded"
           >
-             <div className='flex items-baseline'>Talk To Us<SlArrowDown className='text-xs ml-2' /></div>
+             <div className='flex items-baseline'>Talk To Us<SlArrowDown className='ml-2 text-xs' /></div>
           </button> }
             
 
@@ -124,19 +124,19 @@ const Navbar = () => {
 
     {/* Mobile SideNav */}
     <div className='xl:hidden h-[80px] fixed top-0 left-0 right-0 z-[999999] bg-[#111010]'>
-      <nav className=' bg-black flex justify-between items-center p-6 lg:px-10 py-5 xl:hidden'>
+      <nav className='flex items-center justify-between p-6 py-5 bg-black  lg:px-10 xl:hidden'>
         <div className='w-24'>
           <Link href="/">
             <Image src={Logo} alt='The Wok Logo'/>
           </Link>
         </div>
         <div onClick={toggleNav}>
-          {isOpen ? <MdClose className=' h-8 w-8 text-white' /> : <MdMenu className=' h-8 w-8 text-red-900' />}
+          {isOpen ? <MdClose className='w-8 h-8 text-white ' /> : <MdMenu className='w-8 h-8 text-red-900 ' />}
         </div>
       </nav>
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 z-50" onClick={toggleNav}>
-          <div className="animate-slide-in bg-red-900 w-64 h-full fixed left-0 top-0 overflow-auto z-50 p-6 flex flex-col justify-between">
+        <div className="fixed top-0 left-0 z-50 w-full h-full bg-gray-900 bg-opacity-50" onClick={toggleNav}>
+          <div className="fixed top-0 left-0 z-50 flex flex-col justify-between w-64 h-full p-6 overflow-auto bg-red-900 animate-slide-in">
               <div className='flex flex-col'>
                 <Link href="/about" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>About Us</Link>
                 <Link href="/careers/join-us" className='mb-5 text-white mr-10 tracking-[0.25px] text-xl'>Join Us</Link>
@@ -148,17 +148,17 @@ const Navbar = () => {
                 <a href="https://heylink.me/thewok?fbclid=PAAaYSf8A7ru06PtyFji2jlUjyRlGCMm6042dVv2pJMevReWJ-uf3j0Eae6ko" target='_blank' className='mt-5 text-white mr-10 tracking-[0.25px] text-xl'>Order Now</a>
               </div>
               <div>
-                <div className="flex items-center absolute bottom-12 left-6">
-                  <a href="https://www.facebook.com/thewoklb" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4">
+                <div className="absolute flex items-center bottom-12 left-6">
+                  <a href="https://www.facebook.com/thewoklb" target='_blank' className="inline-block w-10 mr-2 2xl:mb-4">
                     <Image src={Facebook} alt="Facebook" />
                     </a>
-                  <a href="https://www.tiktok.com/@thewokarabia" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4">
+                  <a href="https://www.tiktok.com/@thewokarabia" target='_blank' className="inline-block w-10 mr-2 2xl:mb-4">
                     <Image src={Tiktok} alt="Tiktok" />
                     </a>
-                  <a href="https://www.instagram.com/thewokarabia" target='_blank' className="mr-2 w-10 inline-block 2xl:mb-4">
+                  <a href="https://www.instagram.com/thewokarabia" target='_blank' className="inline-block w-10 mr-2 2xl:mb-4">
                     <Image src={Instagram} alt="Instagram" />
                     </a>
-                  <a href="http://www.youtube.com/@thewokarabia" target='_blank' className="w-10 inline-block">
+                  <a href="http://www.youtube.com/@thewokarabia" target='_blank' className="inline-block w-10">
                     <Image src={Youtube} alt="Youtube" />
                     </a>
                 </div>
