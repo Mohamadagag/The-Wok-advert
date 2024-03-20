@@ -28,14 +28,6 @@
   background-image: url("../public/bg.png");
 }
 
-.message-bg {
-  background-image: url("../public/MessageUsbg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh - 6rem - 87px);
-}
-
 .location-height {
   height: calc(100vh - 87px);
 }
