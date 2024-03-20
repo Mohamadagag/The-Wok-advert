@@ -76,14 +76,14 @@ const LocationsPage = () => {
               </div>
               <div className='mt-5'>
                 <button className='w-9 mr-3' onClick={changePreviousLocation}>
-                  <Image src={LeftArrow} />
+                  <Image src={LeftArrow} alt='Left Arrow Icon' />
                 </button>
                 <button className='w-9 mr-3' onClick={changeNextLocation}>
-                  <Image src={RightArrow} />
+                  <Image src={RightArrow} alt='Right Arrow Icon' />
                 </button>
                 {/* Button to show the section */}
                 <button className='w-9' onClick={toggleNav}>
-                  <Image src={List} />
+                  <Image src={List} alt='List Icon' />
                 </button>
               </div>
             </div>

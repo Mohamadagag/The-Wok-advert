@@ -66,7 +66,7 @@ const FranchisePage = () => {
           </ul>
         </div>
         <div className="2xl:max-w-[50rem] mt-20 hidden 2xl:inline-block">
-          <Image src={Franchise} />
+          <Image src={Franchise} alt="Franchise Image" />
         </div>
         </div>
         

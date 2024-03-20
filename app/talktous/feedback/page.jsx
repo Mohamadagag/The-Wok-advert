@@ -55,7 +55,7 @@ const feedback = () => {
               </div>
         </div>
         <div className="hidden 2xl:inline-block 2xl:p-5 2xl:max-w-[50rem]">
-          <Image src={Feedback} />
+          <Image src={Feedback} alt="Feedback Image" />
         </div>
       </main>
       <Footer />   

@@ -38,7 +38,7 @@ const MessageUs = () => {
               </div>
 
               <div className="hidden 2xl:block 2xl:p-5 2xl:max-w-[50rem] ">
-                <Image src={MessageUsPic} />
+                <Image src={MessageUsPic} alt="Message Us Image" />
               </div>
           </main> 
     <Footer />

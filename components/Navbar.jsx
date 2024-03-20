@@ -12,12 +12,10 @@ import Instagram from '../public/social media/instagram.svg'
 import Youtube from '../public/social media/youtube.svg'
 import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
-
-
-
-
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false)
   const [isCareersOpen, setIsCareersOpen] = useState(false);
   const [isTalkToUsOpen, setIsTalkToUsOpen] = useState(false);
@@ -36,7 +34,7 @@ const Navbar = () => {
         </Link>
        </div>
        <div>
-        <Link href="/about" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>About Us</Link>
+        <Link href="/about" className={pathname === "/about" ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : `lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]`}>About Us</Link>
 
         <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsCareersOpen(false)}>
             <div className="relative inline">
@@ -62,7 +60,7 @@ const Navbar = () => {
                   className="bg-[#171717] z-10 absolute left-0 p-1 mt-2 w-44 rounded-md shadow-lg"
                   onMouseLeave={() => setIsCareersOpen(false)}
                 >
-                  <div className="py-1 rounded-md bg-[#171717] shadow-xs">
+                  <div className={`py-1 rounded-md bg-[#171717] shadow-xs`}>
                     <Link href="/careers/join-us" className="rounded text-[#484848] block px-4  py-2 text-sm hover:bg-[#212020] hover:text-white hover:border border-[#970000]"  onClick={() => setIsCareersOpen(false)} >Join Us</Link>
                     <Link href="/careers/our-family" className="rounded text-[#484848] block px-4  py-2 text-sm hover:bg-[#212020] hover:text-white  hover:border border-[#970000]"  onClick={() => setIsCareersOpen(false)} >Our Family</Link>
                   </div>
@@ -71,8 +69,8 @@ const Navbar = () => {
             </div>
         </div>
 
-        <Link href="/franchise" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Franchise</Link>
-        <Link href="/locations" className='lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'>Locations</Link>
+        <Link href="/franchise" className={pathname === '/franchise' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'}>Franchise</Link>
+        <Link href="/locations" className={pathname === '/locations' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'}>Locations</Link>
 
 
         <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsTalkToUsOpen(false)}>
