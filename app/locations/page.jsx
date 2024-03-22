@@ -20,12 +20,22 @@ const locations = [
   {
     name : "Wok town",
     location : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105956.24785890234!2d35.48455460684816!3d33.911982931584824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17dc20a5e01f%3A0x19f5e3f3a2146c59!2sWok%20town!5e0!3m2!1sen!2slb!4v1710639100134!5m2!1sen!2slb",
-    link: ""
+    link: "https://www.google.com/maps/dir//Wok+town,+Saint+terez,+Hadath/@34.0475362,35.4279353,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f17dc20a5e01f:0x19f5e3f3a2146c59!2m2!1d35.5235127!2d33.8488018?authuser=0&entry=ttu"
+  },
+  {
+    name : 'The Wok Jbeil',
+    location : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211574.85519345143!2d35.427935309159494!3d34.047536231667884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f5d73c59d4e9d%3A0xa4c8da4922c5b3ec!2sThe%20Wok%20Jbeil!5e0!3m2!1sen!2slb!4v1711076863212!5m2!1sen!2slb',
+    link: 'https://www.google.com/maps/dir//The+Wok+Jbeil,+Sea+Side+Rd,+Byblos/@34.0475362,35.4279353,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f5d73c59d4e9d:0xa4c8da4922c5b3ec!2m2!1d35.6483705!2d34.1240077?authuser=0&entry=ttu'
   },
   {
     name : 'The Wok Kaslik',
-    location : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105956.24785890234!2d35.48455460684816!3d33.911982931584824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f41ce27ea7eb5%3A0x9b1c36d0b75a4e65!2sThe%20Wok%20Kaslik!5e0!3m2!1sen!2slb!4v1710639194034!5m2!1sen!2slb',
-    link: 'https://www.google.com/maps/dir//The+Wok+Kaslik,+Sea+Side+Rd/@34.4157299,35.5443191,10z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f41ce27ea7eb5:0x9b1c36d0b75a4e65!2m2!1d35.6103976!2d33.974934?authuser=0&entry=ttu'
+    location : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211574.85519345143!2d35.427935309159494!3d34.047536231667884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f41ce27ea7eb5%3A0x9b1c36d0b75a4e65!2sThe%20Wok%20Kaslik!5e0!3m2!1sen!2slb!4v1711076968846!5m2!1sen!2slb',
+    link: 'https://www.google.com/maps/dir//The+Wok+Kaslik,+Sea+Side+Rd/@34.0475362,35.4279353,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f41ce27ea7eb5:0x9b1c36d0b75a4e65!2m2!1d35.6103976!2d33.974934?authuser=0&entry=ttu'
+  },
+  {
+    name : 'The Wok Batroun',
+    location : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211574.85519345143!2d35.427935309159494!3d34.047536231667884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f59083d39fe67%3A0x7a4a984938a46db1!2sThe%20Wok%20Batroun!5e0!3m2!1sen!2slb!4v1711076646009!5m2!1sen!2slb',
+    link: 'https://www.google.com/maps/dir//The+Wok+Batroun,+Batroun+Seaside+Road/@34.0475362,35.4279353,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x151f59083d39fe67:0x7a4a984938a46db1!2m2!1d35.6619724!2d34.2459216?authuser=0&entry=ttu'
   }
 ]
 
@@ -98,7 +108,7 @@ const LocationsPage = () => {
           </div>
 
           <div className='flex flex-col py-4 xl:py-0 text-center'>
-            <a href={activeLocation.location} target='_blank' className='bg-[#970000] text-base rounded-3xl px-14 py-1 font-normal xl:text-xl lg:w-80'>GET DIRECTIONS</a>
+            <a href={activeLocation.link} target='_blank' className='bg-[#970000] text-base rounded-3xl px-14 py-1 font-normal xl:text-xl lg:w-80'>GET DIRECTIONS</a>
             <button className='text-base mt-5 border rounded-3xl px-14 py-1 border-[#970000] border-y-2 border-x-2 xl:text-xl lg:w-80'>DELIVERY COVERAGE</button>
           </div>
 
