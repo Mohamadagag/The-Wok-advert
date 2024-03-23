@@ -36,7 +36,7 @@ const Navbar = () => {
        <div>
         <Link href="/about" className={pathname === "/about" ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : `lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]`}>About Us</Link>
 
-        <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsCareersOpen(false)}>
+        <div className={pathname === '/careers/join-us' || pathname ===  '/careers/our-family' ? 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'} onMouseLeave={() => setIsCareersOpen(false)}>
             <div className="relative inline">
 
             {isCareersOpen ? (
@@ -73,7 +73,7 @@ const Navbar = () => {
         <Link href="/locations" className={pathname === '/locations' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'}>Locations</Link>
 
 
-        <div className='inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]' onMouseLeave={() => setIsTalkToUsOpen(false)}>
+        <div className={pathname === "/talktous/message-us" || pathname === "/talktous/feedback" ? 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'} onMouseLeave={() => setIsTalkToUsOpen(false)}>
             <div className="relative inline">
 
             {isTalkToUsOpen ? (
