@@ -20,7 +20,7 @@ const FranchisePage = () => {
     setIsCheckedFirst(!isCheckedFirst);
 
     if(isCheckedFirst){
-      setData(prevData => [...prevData, 'I have a current line of credit or access to capital']);
+      setIsCheckedFirst(!isCheckedFirst);
     }
   };
 
@@ -95,7 +95,8 @@ const FranchisePage = () => {
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="w-full mb-5">
                         <label className="block mb-3">Company Profile (Pdf or Doc)<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input id="uploadBtn" type="file" required placeholder="placeholder" className="hidden" />
+                        <label htmlFor="uploadBtn" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block">Upload File</label>
                       </div>
                     </div>
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">

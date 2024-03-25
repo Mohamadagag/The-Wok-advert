@@ -24,7 +24,6 @@ const Ourfamily = () => {
             </div>
           </div>
 
-          {/* <SocialMediaIcons /> */}
         </main>
 
 

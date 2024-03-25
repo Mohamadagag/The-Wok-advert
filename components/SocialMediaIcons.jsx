@@ -8,7 +8,7 @@ const SocialMediaIcons = () => {
   return (
     <div className='hidden xl:block'>
 
-    <div className="fixed top-1/2 left-5  z-[99999999999999999999999]">
+    <div className="fixed top-1/2 left-5  z-[999999]">
       <a href="https://www.facebook.com/thewoklb" target='_blank'>
         <Image className='mb-3' src={Facebook} alt='Facebook Icon' />
       </a>
