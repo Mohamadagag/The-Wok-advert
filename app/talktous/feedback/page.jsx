@@ -13,6 +13,8 @@ const feedback = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [itemRecommendations, setItemRecommendations] = useState('');
   const [experience, setExperience] = useState('');
+  const [whichForm,setWhichForm] = useState('')
+
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -51,7 +53,7 @@ const feedback = () => {
 
                       <div className="mb-5 lg:w-1/2 ">
                         <label className="block mb-3">Phone Number<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />    
+                        <input type="tel" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />    
                       </div>
                     </div>
 

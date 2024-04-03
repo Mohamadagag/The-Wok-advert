@@ -3,12 +3,21 @@ import Footer from "@/components/Footer"
 import SocialMediaIcons from "@/components/SocialMediaIcons"
 import Franchise from "@/public/franchise.png"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const FranchisePage = () => {
 
-  // PRE-QUALIFICATIONS
-  const [data, setData] = []
+  const [fullName, setFullName] = useState('');
+  const [professionDetails, setProfessionDetails] = useState('');
+  const [companyName, setCompanyName] = useState('')
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [typeOfFranchise, setTypeOfFranchise] = useState('');
+  const [investment, setInvestment] = useState('')
+  const [previousExperience, setPreviousExperience] = useState('')
+  const [file, setFile] = useState();
+  const [data, setData] = useState([]) // PRE-QUALIFICATIONS array for
+
   const [isCheckedFirst, setIsCheckedFirst] = useState(false);
   const [isCheckedSecond, setIsCheckedSecond] = useState(false);
   const [isCheckedThird, setIsCheckedThird] = useState(false);
@@ -16,34 +25,128 @@ const FranchisePage = () => {
   const [isCheckedFifth, setIsCheckedFifth] = useState(false);
   const [isCheckedSixth, setIsCheckedSixth] = useState(false);
 
-  const handleCheckedFirst = () => {
-    setIsCheckedFirst(!isCheckedFirst);
+  const [whichForm,setWhichForm] = useState('')
 
-    if(isCheckedFirst){
-      setIsCheckedFirst(!isCheckedFirst);
-    }
+
+  const handleCheckedFirst = () => {
+    setIsCheckedFirst(prevIsCheckedFirst => {
+      const newData = [...data];
+      const text = "I have a current line of credit or access to capital";
+      if(!prevIsCheckedFirst){
+        newData.push(text);
+      } else {
+        const index = newData.indexOf(text);
+        if (index > -1) {
+          newData.splice(index, 1);
+        }
+      }
+      setData(newData);
+      return !prevIsCheckedFirst;
+    });
   };
 
   const handleCheckedSecond = () => {
-    setIsCheckedSecond(!isCheckedSecond);
+    setIsCheckedSecond(prevIsCheckedSecond => {
+      const newData = [...data];
+      const text = "I am seeking a multi-unit opportunity";
+      if(!prevIsCheckedSecond){
+        newData.push(text);
+      } else {
+        const index = newData.indexOf(text);
+        if (index > -1) {
+          newData.splice(index, 1);
+        }
+      }
+      setData(newData);
+      return !prevIsCheckedSecond;
+    });
   };
 
   const handleCheckedThird = () => {
-    setIsCheckedThird(!isCheckedThird);
+    setIsCheckedThird(prevIsCheckedThird => {
+      const newData = [...data];
+      const text = "I have restaurant business experience";
+      if(!prevIsCheckedThird){
+        newData.push(text);
+      } else {
+        const index = newData.indexOf(text);
+        if (index > -1) {
+          newData.splice(index, 1);
+        }
+      }
+      setData(newData);
+      return !prevIsCheckedThird;
+    });
   };
 
   const handleCheckedFourth = () => {
-    setIsCheckedFourth(!isCheckedFourth);
+    setIsCheckedFourth(prevIsCheckedFourth => {
+      const newData = [...data];
+      const text = "I, or one of my partners, has QSR Restaurant Experience";
+      if(!prevIsCheckedFourth){
+        newData.push(text);
+      } else {
+        const index = newData.indexOf(text);
+        if (index > -1) {
+          newData.splice(index, 1);
+        }
+      }
+      setData(newData);
+      return !prevIsCheckedFourth;
+    });
   };
 
   const handleCheckedFifth = () => {
-    setIsCheckedFifth(!isCheckedFifth);
+    setIsCheckedFifth(prevIsCheckedFifth => {
+      const newData = [...data];
+      const text = "I currently am (or have previously been) a business owner";
+      if(!prevIsCheckedFifth){
+        newData.push(text);
+      } else {
+        const index = newData.indexOf(text);
+        if (index > -1) {
+          newData.splice(index, 1);
+        }
+      }
+      setData(newData);
+      return !prevIsCheckedFifth;
+    });
   };
 
   const handleCheckedSixth = () => {
-    setIsCheckedSixth(!isCheckedSixth);
+    setIsCheckedSixth(prevIsCheckedSixth => {
+      const newData = [...data];
+      const text = "I am currently a multi-unit franchise";
+      if(!prevIsCheckedSixth){
+        newData.push(text);
+      } else {
+        const index = newData.indexOf(text);
+        if (index > -1) {
+          newData.splice(index, 1);
+        }
+      }
+      setData(newData);
+      return !prevIsCheckedSixth;
+    });
   };
-  
+
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    
+    if (!file) {
+      alert('Please select a file.');
+      return;
+    }
+    
+    alert('done')
+  }
+
   return (
     <>
       <SocialMediaIcons />
@@ -73,41 +176,42 @@ const FranchisePage = () => {
         <div className="w-full mx-auto text-white 2xl:w-[35%]">
           <div className="w-full mx-auto">
                 <>
-                  <form className="text-white 2xl:pt-10 2xl:max-w-[35rem] md:w-full">
+                  <form className="text-white 2xl:pt-10 2xl:max-w-[35rem] md:w-full" onSubmit={handleSubmit}>
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="mb-5 lg:w-1/2">
                         <label className="block mb-3">Full Name<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={fullName} onChange={(e) => setFullName(e.target.value)} />
                       </div>
 
                       <div className="mb-5 lg:w-1/2 ">
                         <label className="block mb-3">Profession Details<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={professionDetails} onChange={(e) => setProfessionDetails(e.target.value)} />
                       </div>
 
                     </div>
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="mb-5 lg:w-1/2">
                         <label className="block mb-3">Company Name<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
                       </div>
                     </div>
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="w-full mb-5">
                         <label className="block mb-3">Company Profile (Pdf or Doc)<span className="text-[#970000]"> *</span></label>
-                        <input id="uploadBtn" type="file" required placeholder="placeholder" className="hidden" />
+                        <input id="uploadBtn" name="uploadBtn" type="file" placeholder="placeholder" onChange={handleFileChange} className="hidden" />
                         <label htmlFor="uploadBtn" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block">Upload File</label>
                       </div>
                     </div>
+
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="mb-5 lg:w-1/2">
                         <label className="block mb-3">Email<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={email} onChange={(e) => setEmail(e.target.value)}/>
                       </div>
 
                       <div className="mb-5 lg:w-1/2 ">
                         <label className="block mb-3">Phone Number<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
                       </div>
 
                     </div>
@@ -115,27 +219,28 @@ const FranchisePage = () => {
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="mb-5 lg:w-1/2">
                         <label className="block mb-3">Type Of Franchise<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={typeOfFranchise} onChange={(e) => setTypeOfFranchise(e.target.value)}/>
                       </div>
 
                       <div className="mb-5 lg:w-1/2 ">
                         <label className="block mb-3">Investment<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] " />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={investment} onChange={(e) => setInvestment(e.target.value)}/>
                       </div>
                     </div>
 
                     <div className="max-w-5xl lg:max-w-[100%] mb-8">
                       <label>Previous Experience With A Franchise Company<span className="text-[#970000]"> *</span></label>
-                      <textarea rows="3" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full" placeholder="placeholder"></textarea>
+                      <textarea rows="3" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full" placeholder="placeholder" value={previousExperience} onChange={(e) => setPreviousExperience(e.target.value)}></textarea>
                     </div>
 
                     {/* PRE-QUALIFICATIONS */}
                     <div className="flex flex-col flex-wrap mb-2 lg:max-w-[100%]">
                       <h2 className="mb-6 text-2xl font-semibold">PRE-QUALIFICATIONS</h2>
-                      <div onClick={handleCheckedFirst} className={`${isCheckedFirst ? 'border border-[#970000]' : ''} flex items-center justify-center w-full text-[#7A7878] bg-[#171717] p-2 rounded-full hover:cursor-pointer sm:text-text-lg mb-5`}>
-                          <label className="text-sm text-center md:text-base hover:cursor-pointer">I have a current line of credit or access to capital</label>
-                      </div>
                       
+                      <div onClick={handleCheckedFirst} className={`${isCheckedFirst ? 'border border-[#970000]' : ''} flex items-center justify-center w-full text-[#7A7878] bg-[#171717] p-2 rounded-full hover:cursor-pointer sm:text-text-lg mb-5 text-sm text-center md:text-base`} >
+                          <label >I have a current line of credit or access to capital</label>
+                      </div>
+
                       <div onClick={handleCheckedSecond} className={`${isCheckedSecond ? 'border border-[#970000]' : ''} flex items-center justify-center w-full text-[#7A7878] bg-[#171717] p-2 rounded-full hover:cursor-pointer sm:text-text-lg mb-5`}>
                           <label className="text-sm text-center md:text-base hover:cursor-pointer">I am seeking a multi-unit opportunity</label>
                       </div>
@@ -156,7 +261,7 @@ const FranchisePage = () => {
                           <label className="text-sm text-center md:text-base hover:cursor-pointer">I am currently a multi-unit franchise</label>
                       </div>
                     </div>
-                    <button className="bg-[#970000] px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem]">SUBMIT</button>
+                    <button className="bg-[#970000] px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem]" type="submit">SUBMIT</button>
                   </form>
                 </>
               </div>
