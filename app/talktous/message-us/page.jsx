@@ -15,16 +15,14 @@ const MessageUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
   
-    axios.post('https://email-u11y.onrender.com/sendemail', {
+    axios.post('https://thewokemailservices.onrender.com/sendEmail', {
       fullName: fullName,
       email: email,
       phoneNumber: phoneNumber,
       recommendation: recommendation
-    })
-      .then(response => {
-        console.log('Response: ', response);
-      })
-      .catch(error => {
+    }).then(response => {
+        console.log('Response: ', response.data);
+      }).catch(error => {
         console.error('Error: ', error);
       });
   }
@@ -50,7 +48,7 @@ const MessageUs = () => {
 
                         <div className="lg:w-1/3 ">
                           <label className="block mb-3">Email<span className="text-[#970000]"> *</span></label>
-                          <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={email} onChange={(e) => setEmail(e.target.value)} />       
+                          <input type="email" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={email} onChange={(e) => setEmail(e.target.value)} />       
                         </div> 
 
                       </div>

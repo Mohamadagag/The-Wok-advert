@@ -4,19 +4,21 @@ import SocialMediaIcons from "@/components/SocialMediaIcons"
 import Franchise from "@/public/franchise.png"
 import Image from "next/image"
 import { useState } from "react"
+import axios from "axios"
+
 
 const FranchisePage = () => {
 
   const [fullName, setFullName] = useState('');
-  const [professionDetails, setProfessionDetails] = useState('');
+  const [professionalDetail, setProfessionalDetail] = useState('');
   const [companyName, setCompanyName] = useState('')
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [typeOfFranchise, setTypeOfFranchise] = useState('');
   const [investment, setInvestment] = useState('')
-  const [previousExperience, setPreviousExperience] = useState('')
-  const [file, setFile] = useState();
-  const [data, setData] = useState([]) // PRE-QUALIFICATIONS array for
+  const [previousExperienceWithAFranchiseCompany, setPreviousExperienceWithAFranchiseCompany] = useState('')
+  const [attachment, setAttachment] = useState(null); 
+  const [preQualifications, setPreQualifications] = useState([]) // PRE-QUALIFICATIONS array for
 
   const [isCheckedFirst, setIsCheckedFirst] = useState(false);
   const [isCheckedSecond, setIsCheckedSecond] = useState(false);
@@ -25,127 +27,135 @@ const FranchisePage = () => {
   const [isCheckedFifth, setIsCheckedFifth] = useState(false);
   const [isCheckedSixth, setIsCheckedSixth] = useState(false);
 
-  const [whichForm,setWhichForm] = useState('')
-
-
   const handleCheckedFirst = () => {
     setIsCheckedFirst(prevIsCheckedFirst => {
-      const newData = [...data];
+      const newpreQualifications = [...preQualifications];
       const text = "I have a current line of credit or access to capital";
       if(!prevIsCheckedFirst){
-        newData.push(text);
+        newpreQualifications.push(text);
       } else {
-        const index = newData.indexOf(text);
+        const index = newpreQualifications.indexOf(text);
         if (index > -1) {
-          newData.splice(index, 1);
+          newpreQualifications.splice(index, 1);
         }
       }
-      setData(newData);
+      setPreQualifications(newpreQualifications);
       return !prevIsCheckedFirst;
     });
   };
 
   const handleCheckedSecond = () => {
     setIsCheckedSecond(prevIsCheckedSecond => {
-      const newData = [...data];
+      const newpreQualifications = [...preQualifications];
       const text = "I am seeking a multi-unit opportunity";
       if(!prevIsCheckedSecond){
-        newData.push(text);
+        newpreQualifications.push(text);
       } else {
-        const index = newData.indexOf(text);
+        const index = newpreQualifications.indexOf(text);
         if (index > -1) {
-          newData.splice(index, 1);
+          newpreQualifications.splice(index, 1);
         }
       }
-      setData(newData);
+      setPreQualifications(newpreQualifications);
       return !prevIsCheckedSecond;
     });
   };
 
   const handleCheckedThird = () => {
     setIsCheckedThird(prevIsCheckedThird => {
-      const newData = [...data];
+      const newpreQualifications = [...preQualifications];
       const text = "I have restaurant business experience";
       if(!prevIsCheckedThird){
-        newData.push(text);
+        newpreQualifications.push(text);
       } else {
-        const index = newData.indexOf(text);
+        const index = newpreQualifications.indexOf(text);
         if (index > -1) {
-          newData.splice(index, 1);
+          newpreQualifications.splice(index, 1);
         }
       }
-      setData(newData);
+      setPreQualifications(newpreQualifications);
       return !prevIsCheckedThird;
     });
   };
 
   const handleCheckedFourth = () => {
     setIsCheckedFourth(prevIsCheckedFourth => {
-      const newData = [...data];
+      const newpreQualifications = [...preQualifications];
       const text = "I, or one of my partners, has QSR Restaurant Experience";
       if(!prevIsCheckedFourth){
-        newData.push(text);
+        newpreQualifications.push(text);
       } else {
-        const index = newData.indexOf(text);
+        const index = newpreQualifications.indexOf(text);
         if (index > -1) {
-          newData.splice(index, 1);
+          newpreQualifications.splice(index, 1);
         }
       }
-      setData(newData);
+      setPreQualifications(newpreQualifications);
       return !prevIsCheckedFourth;
     });
   };
 
   const handleCheckedFifth = () => {
     setIsCheckedFifth(prevIsCheckedFifth => {
-      const newData = [...data];
+      const newpreQualifications = [...preQualifications];
       const text = "I currently am (or have previously been) a business owner";
       if(!prevIsCheckedFifth){
-        newData.push(text);
+        newpreQualifications.push(text);
       } else {
-        const index = newData.indexOf(text);
+        const index = newpreQualifications.indexOf(text);
         if (index > -1) {
-          newData.splice(index, 1);
+          newpreQualifications.splice(index, 1);
         }
       }
-      setData(newData);
+      setPreQualifications(newpreQualifications);
       return !prevIsCheckedFifth;
     });
   };
 
   const handleCheckedSixth = () => {
     setIsCheckedSixth(prevIsCheckedSixth => {
-      const newData = [...data];
+      const newpreQualifications = [...preQualifications];
       const text = "I am currently a multi-unit franchise";
       if(!prevIsCheckedSixth){
-        newData.push(text);
+        newpreQualifications.push(text);
       } else {
-        const index = newData.indexOf(text);
+        const index = newpreQualifications.indexOf(text);
         if (index > -1) {
-          newData.splice(index, 1);
+          newpreQualifications.splice(index, 1);
         }
       }
-      setData(newData);
+      setPreQualifications(newpreQualifications);
       return !prevIsCheckedSixth;
     });
   };
 
 
+  const [file, setFile] = useState();
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-
-  const handleSubmit = (e) =>{
-    e.preventDefault();
-    
-    if (!file) {
-      alert('Please select a file.');
-      return;
-    }
-    
-    alert('done')
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  
+    axios.post('https://thewokemailservices.onrender.com/sendEmail', {
+      fullName: fullName,
+      email: email,
+      phoneNumber: phoneNumber,
+      typeOfFranchise: typeOfFranchise,
+      investment: investment,
+      previousExperienceWithAFranchiseCompany: previousExperienceWithAFranchiseCompany,
+      preQualifications: preQualifications,
+      professionalDetail: professionalDetail,
+      companyName: companyName,
+      attachment: file
+    }).then(response => {
+        console.log('Response: ', response.data);
+      }).catch(error => {
+        console.error('Error: ', error);
+      });
   }
+  
 
   return (
     <>
@@ -185,7 +195,7 @@ const FranchisePage = () => {
 
                       <div className="mb-5 lg:w-1/2 ">
                         <label className="block mb-3">Profession Details<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={professionDetails} onChange={(e) => setProfessionDetails(e.target.value)} />
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={professionalDetail} onChange={(e) => setProfessionalDetail(e.target.value)} />
                       </div>
 
                     </div>
@@ -195,18 +205,18 @@ const FranchisePage = () => {
                         <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
                       </div>
                     </div>
-                    <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
-                      <div className="w-full mb-5">
-                        <label className="block mb-3">Company Profile (Pdf or Doc)<span className="text-[#970000]"> *</span></label>
-                        <input id="uploadBtn" name="uploadBtn" type="file" placeholder="placeholder" onChange={handleFileChange} className="hidden" />
-                        <label htmlFor="uploadBtn" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block">Upload File</label>
-                      </div>
-                    </div>
+                      {/* <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
+                        <div className="w-full mb-5">
+                          <label className="block mb-3">Company Profile (Pdf or Doc)<span className="text-[#970000]"> *</span></label>
+                          <input id="uploadBtn" name="attachment" type="file" placeholder="placeholder" onChange={handleFileChange}/>
+                          <label htmlFor="uploadBtn" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block">Upload File</label>
+                        </div>
+                      </div> */}
 
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="mb-5 lg:w-1/2">
                         <label className="block mb-3">Email<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={email} onChange={(e) => setEmail(e.target.value)}/>
                       </div>
 
                       <div className="mb-5 lg:w-1/2 ">
@@ -230,7 +240,7 @@ const FranchisePage = () => {
 
                     <div className="max-w-5xl lg:max-w-[100%] mb-8">
                       <label>Previous Experience With A Franchise Company<span className="text-[#970000]"> *</span></label>
-                      <textarea rows="3" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full" placeholder="placeholder" value={previousExperience} onChange={(e) => setPreviousExperience(e.target.value)}></textarea>
+                      <textarea rows="3" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full" placeholder="placeholder" value={previousExperienceWithAFranchiseCompany} onChange={(e) => setPreviousExperienceWithAFranchiseCompany(e.target.value)}></textarea>
                     </div>
 
                     {/* PRE-QUALIFICATIONS */}
