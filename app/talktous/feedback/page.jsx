@@ -26,9 +26,9 @@ const feedback = () => {
       recommendation: recommendation,
       yourExperience: yourExperience,
     }).then(response => {
-        console.log('Response: ', response.data);
+      alert("Email sent successfully")
       }).catch(error => {
-        console.error('Error: ', error);
+        alert("An Error has occurred")
       });
   }
   return (
@@ -73,7 +73,7 @@ const feedback = () => {
                       <textarea rows="5" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full " placeholder="placeholder" value={recommendation} onChange={(e) => setRecommendation(e.target.value)} />
                     </div>
                     <div className="max-w-5xl lg:max-w-[100%]">
-                      <label>How was your yourExperience at The Wok?<span className="text-[#970000]"> *</span></label>
+                      <label>How was your your experience at The Wok?<span className="text-[#970000]"> *</span></label>
                       <textarea rows="5" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full" placeholder="placeholder" value={yourExperience} onChange={(e) => setYourExperience(e.target.value)} />                  
                     </div>
                     <button type="submit" className="bg-[#970000] px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem]">SUBMIT</button>

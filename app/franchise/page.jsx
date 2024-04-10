@@ -18,6 +18,8 @@ const FranchisePage = () => {
   const [investment, setInvestment] = useState('')
   const [previousExperienceWithAFranchiseCompany, setPreviousExperienceWithAFranchiseCompany] = useState('')
   const [attachment, setAttachment] = useState(null); 
+  const [capital, setCapital] = useState(0);
+  const [country, setCountry] = useState('');
   const [preQualifications, setPreQualifications] = useState([]) // PRE-QUALIFICATIONS array for
 
   const [isCheckedFirst, setIsCheckedFirst] = useState(false);
@@ -135,27 +137,44 @@ const FranchisePage = () => {
     setFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  
-    axios.post('https://thewokemailservices.onrender.com/sendEmail', {
-      fullName: fullName,
-      email: email,
-      phoneNumber: phoneNumber,
-      typeOfFranchise: typeOfFranchise,
-      investment: investment,
-      previousExperienceWithAFranchiseCompany: previousExperienceWithAFranchiseCompany,
-      preQualifications: preQualifications,
-      professionalDetail: professionalDetail,
-      companyName: companyName,
-      attachment: file
-    }).then(response => {
-        console.log('Response: ', response.data);
-      }).catch(error => {
-        console.error('Error: ', error);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    
+    if (!file) {
+      alert("Please select a File");
+      return; 
+    }
+ 
+
+    const formData = new FormData();
+    formData.append('fullName', fullName);
+    formData.append('email', email);
+    formData.append('phoneNumber', phoneNumber);
+    formData.append('typeOfFranchise', typeOfFranchise);
+    formData.append('investment', investment);
+    formData.append('previousExperienceWithAFranchiseCompany', previousExperienceWithAFranchiseCompany);
+    formData.append('professionalDetail', professionalDetail);
+    formData.append('companyName', companyName);
+    formData.append('capital', capital);
+    formData.append('country', country);
+    formData.append('attachment', file);
+
+    preQualifications.forEach((qualification, index) => {
+      formData.append(`preQualifications[${index}]`, qualification);
+    });
+
+    try {
+      const response = await axios.post('https://thewokemailservices.onrender.com/sendEmail', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       });
-  }
-  
+      alert("Email sent successfully")
+    } catch (error) {
+      alert("An Error has occurred")
+    }
+  };
 
   return (
     <>
@@ -205,13 +224,13 @@ const FranchisePage = () => {
                         <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
                       </div>
                     </div>
-                      {/* <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
-                        <div className="w-full mb-5">
-                          <label className="block mb-3">Company Profile (Pdf or Doc)<span className="text-[#970000]"> *</span></label>
-                          <input id="uploadBtn" name="attachment" type="file" placeholder="placeholder" onChange={handleFileChange}/>
-                          <label htmlFor="uploadBtn" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block">Upload File</label>
-                        </div>
-                      </div> */}
+                    <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
+                      <div className="w-full mb-5">
+                        <label className="block mb-3">Company Profile (Pdf or Doc)<span className="text-[#970000]"> *</span></label>
+                        <input id="uploadBtn" name="uploadBtn" type="file" placeholder="placeholder" onChange={handleFileChange} className="hidden" />
+                        <label htmlFor="uploadBtn" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block">Upload File</label>
+                      </div>
+                    </div>
 
                     <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
                       <div className="mb-5 lg:w-1/2">
@@ -221,7 +240,20 @@ const FranchisePage = () => {
 
                       <div className="mb-5 lg:w-1/2 ">
                         <label className="block mb-3">Phone Number<span className="text-[#970000]"> *</span></label>
-                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+                        <input type="tel" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+                      </div>
+
+                    </div>
+
+                    <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
+                      <div className="mb-5 lg:w-1/2">
+                        <label className="block mb-3">Capital and assets NetWorth<span className="text-[#970000]"> *</span></label>
+                        <input type="number" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={capital} onChange={(e) => setCapital(e.target.value)}/>
+                      </div>
+
+                      <div className="mb-5 lg:w-1/2 ">
+                        <label className="block mb-3">Country<span className="text-[#970000]"> *</span></label>
+                        <input type="text" required placeholder="placeholder" className="bg-[#171717] pl-5 py-3 rounded-3xl w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]" value={country} onChange={(e) => setCountry(e.target.value)}/>
                       </div>
 
                     </div>

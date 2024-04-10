@@ -21,9 +21,9 @@ const MessageUs = () => {
       phoneNumber: phoneNumber,
       recommendation: recommendation
     }).then(response => {
-        console.log('Response: ', response.data);
+      alert("Email sent successfully")
       }).catch(error => {
-        console.error('Error: ', error);
+        alert("An Error has occurred")
       });
   }
 
