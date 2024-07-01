@@ -20,7 +20,7 @@ export default function Home() {
     <div className="relative">
       <Image src={Banner} alt="Home Page Banner" className="object-cover w-full"/>
       <div className="absolute order-btn-container">
-      <button className="bg-[#B61414] text-sm order-btn rounded-full text-white ">ORDER NOW</button>
+      <button className="order-btn text-sm order-btn rounded-full text-white ">ORDER NOW</button>
       </div>
       <div className="hidden xl:flex xl:flex-col xl:fixed xl:bottom-1/2 xl:right-9 z-[80]">
         <a href="https://www.facebook.com/thewoklb" target='_blank' className="inline-block xl:mb-2 2xl:mb-5"><Image src={Facebook} alt="Facebook" /></a>
@@ -46,7 +46,7 @@ export default function Home() {
       {/* Secion */}
         <div className="2xl:pt-16 relative lg:hidden">
         <div className=" mb-10">
-          <Image src={MobileRed} alt="Build Your Own Wok Bottom" className="w-full object-cover" />
+          <Image src={MobileRed} alt="Build Your Own Wok Bottom" className="object-cover" />
               <div className="absolute top-20 w-full px-2 top-container">
                 <div className="text-white inline-block">
                   <div className="text-container">
@@ -84,16 +84,16 @@ export default function Home() {
         </div>
       <Image src={Think} className="hidden lg:block" alt="Think Inside The Box"/>
       </div>
-        <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[34%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[41%] md:left-[17%] lg:left-[25%] lg:top-[30%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[35%] bggersc">
+        <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[33%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[37%] md:left-[17%] lg:left-[25%] lg:top-[30%] xl:top-[36%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[38%] bggersc">
           <div className=" text-center">
-          <h2 className=" text-red-800 font-bold text-2xl mb-1 max-w-[14ch] md:text-4xl md:mb-5">THINK INSIDE THE BOX</h2>
+          <h2 className=" text-red-800 font-bold text-2xl mb-1 max-w-[14ch] md:text-4xl md:mb-10">THINK INSIDE THE BOX</h2>
           </div>
           <p className="text-center text-base md:text-2xl">Picture this: a box filled with noodles, topped with all your favorite fixings, and drenched in mouthwatering sauce. That's our Build Your Own Concept in action. It's like creating your own flavor-packed adventure every time you visit</p>
         </div>
       </div>
 
     {/* Section */}
-    <div className="flex flex-col md:flex-row justify-between items-center mb-10 px-4 lg:px-8 2xl:px-28">
+    <div className="flex flex-col md:flex-row justify-between items-center mb-10 px-4 lg:px-8 2xl:px-10">
       <div className="max-w-xs mr-3 md:max-w-sm xl:max-w-none">
         <h2 className="text-red-800 font-bold text-2xl mb-3 sm:text-3xl sm:mb-4 md:text-4xl xl:max-w-sm 2xl:text-5xl 2xl:max-w-[26rem] 2xl:mb-16">Noodles Wok'd to Perfection</h2>
         <div className="xl:max-w-md 2xl:max-w-[34rem] font-light">

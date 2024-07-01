@@ -56,7 +56,7 @@ const MessageUs = () => {
                         <label className="">Share with us new item recommendations to be added to our menu<span className="text-[#970000]"> *</span></label>
                         <textarea rows="6" required className="bg-[#171717] pl-5 pt-3 mt-3 rounded-2xl block w-full" placeholder="placeholder" value={recommendation} onChange={(e) => setRecommendations(e.target.value)} /> 
                      </div>
-                      <button type="submit" className="bg-[#970000] px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem]">SUBMIT</button>
+                      <button type="submit" className="primary-btn px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem]">SUBMIT</button>
                   </form>
                 </>
               </div>

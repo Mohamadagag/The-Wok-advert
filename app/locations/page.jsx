@@ -77,7 +77,7 @@ const LocationsPage = () => {
         </div>
         <div className="bg-[#1E1E1E] text-white lg:rounded-t-xl h-10 bottom-0 lg:absolute left-0 right-0 mx-auto my-auto min-h-[140px] lg:max-w-[70rem] font-light tracking-wide text-xl flex-col lg:flex-row">
           <div className="flex justify-between px-8 xl:py-5 flex-col md:flex-row bg-[#1E1E1E] lg:rounded-t-xl ">
-            <div className='py-4 xl:py-0 '>
+            <div className='lg:w-1/3 py-4 xl:py-0 '>
               <div className='flex items-center'>
                 <span className='w-[1.3rem]'>
                   <Image src={LocationIcon} alt='Location Icon'/>
@@ -98,7 +98,7 @@ const LocationsPage = () => {
               </div>
             </div>
           
-          <div className='py-4 xl:py-0'>
+          <div className='lg:w-1/3 py-4 xl:py-0'>
             <div className='flex items-center'>
               <span className='w-8'>
               <Image src={Mail} alt='Mail Icon'/>
@@ -107,8 +107,8 @@ const LocationsPage = () => {
             </div>
           </div>
 
-          <div className='flex flex-col py-4 xl:py-0 text-center'>
-            <a href={activeLocation.link} target='_blank' className='bg-[#970000] text-base rounded-3xl px-14 py-1 font-normal xl:text-xl lg:w-80'>GET DIRECTIONS</a>
+          <div className='lg:w-1/3 flex flex-col py-4 xl:py-0 text-center'>
+            <a href={activeLocation.link} target='_blank' className='primary-btn text-base rounded-3xl px-14 py-1 font-normal xl:text-xl lg:w-80'>GET DIRECTIONS</a>
             <button className='text-base mt-5 border rounded-3xl px-14 py-1 border-[#970000] border-y-2 border-x-2 xl:text-xl lg:w-80'>DELIVERY COVERAGE</button>
           </div>
 
