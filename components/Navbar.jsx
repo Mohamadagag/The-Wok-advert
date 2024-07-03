@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Logo from '../public/TheWokNavbarLogo.svg'
+import Logo2 from '../public/TheWokNavbarLogo2.svg'
 import Phone from '../public/Phone.svg'
 import Link from 'next/link'
 import { MdMenu, MdClose } from "react-icons/md";
@@ -27,16 +28,16 @@ const Navbar = () => {
   return (
     <>
     {/* Desktop Navigation*/}
-    <nav className="hidden h-[87px] xl:flex items-center justify-between px-10 fixed top-0 left-0 right-0 z-[999999] bg-[#111010]">
+    <nav className="hidden h-[105px] xl:flex items-center justify-between px-10 fixed top-0 left-0 right-0 z-[999999] bg-[#000000]">
        <div>
         <Link href="/">
-          <Image src={Logo} alt='The Wok Logo'/>
+          <Image src={Logo2} alt='The Wok Logo'/>
         </Link>
        </div>
        <div>
-        <Link href="/about" className={pathname === "/about" ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : `lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]`}>About Us</Link>
+        <Link href="/about" className={pathname === "/about" ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[35px]' : `lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[35px]`}>About Us</Link>
 
-        <div className={pathname === '/careers/join-us' || pathname ===  '/careers/our-family' ? 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'} onMouseLeave={() => setIsCareersOpen(false)}>
+        <div className={pathname === '/careers/join-us' || pathname ===  '/careers/our-family' ? 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[35px]' : 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[35px]'} onMouseLeave={() => setIsCareersOpen(false)}>
             <div className="relative inline">
 
             {isCareersOpen ? (
@@ -69,11 +70,11 @@ const Navbar = () => {
             </div>
         </div>
 
-        <Link href="/franchise" className={pathname === '/franchise' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'}>Franchise</Link>
-        <Link href="/locations" className={pathname === '/locations' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'}>Locations</Link>
+        <Link href="/franchise" className={pathname === '/franchise' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[35px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[35px]'}>Franchise</Link>
+        <Link href="/locations" className={pathname === '/locations' ? 'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[35px]' :'lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[35px]'}>Locations</Link>
 
 
-        <div className={pathname === "/talktous/message-us" || pathname === "/talktous/feedback" ? 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[26px]' : 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[26px]'} onMouseLeave={() => setIsTalkToUsOpen(false)}>
+        <div className={pathname === "/talktous/message-us" || pathname === "/talktous/feedback" ? 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl border-b-4 border-[#970000] pb-[35px]' : 'inline lg:text-white lg:mr-10 lg:tracking-[0.25px] lg:text-xl lg:hover:border-b-4 lg:hover:border-[#970000] lg:hover:pb-[35px]'} onMouseLeave={() => setIsTalkToUsOpen(false)}>
             <div className="relative inline">
 
             {isTalkToUsOpen ? (
@@ -116,16 +117,12 @@ const Navbar = () => {
     </nav>
 
 
-
-
-    
-
     {/* Mobile SideNav */}
-    <div className='xl:hidden h-[80px] fixed top-0 left-0 right-0 z-[999999] bg-[#111010]'>
+    <div className='xl:hidden h-[80px] fixed top-0 left-0 right-0 z-[999999] bg-[#000000]'>
       <nav className='flex items-center justify-between p-6 py-5 bg-black  lg:px-10 xl:hidden'>
         <div className='w-24'>
           <Link href="/">
-            <Image src={Logo} alt='The Wok Logo'/>
+            <Image src={Logo2} alt='The Wok Logo'/>
           </Link>
         </div>
         <div onClick={toggleNav}>

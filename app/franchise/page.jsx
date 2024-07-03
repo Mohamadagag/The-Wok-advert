@@ -303,7 +303,7 @@ const FranchisePage = () => {
                           <label className="text-sm text-center md:text-base hover:cursor-pointer">I am currently a multi-unit franchise</label>
                       </div>
                     </div>
-                    <button className="bg-[#970000] px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem]" type="submit">SUBMIT</button>
+                    <button className="bg-[#970000] px-16 rounded-3xl py-2 text-xl mt-10 w-full max-w-5xl lg:max-w-[20rem] 2xl:max-w-[16rem] primary-btn" type="submit">SUBMIT</button>
                   </form>
                 </>
               </div>

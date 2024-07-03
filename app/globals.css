@@ -16,7 +16,7 @@
 }
 
 .order-btn-container {
-  left: 7%;
+  left: 11%;
   bottom: 2px;
 }
 
@@ -157,7 +157,7 @@
 
 @media screen and (min-width: 380px) {
   .order-btn-container {
-    left: 7%;
+    left: 8%;
   }
 
   .order-btn {
@@ -167,14 +167,14 @@
 
 @media screen and (min-width: 465px) {
   .order-btn-container {
-    left: 9%;
+    left: 12%;
     bottom: 10px;
   }
 }
 
 @media screen and (min-width: 500px) {
   .order-btn-container {
-    left: 14%;
+    left: 13%;
     bottom: 10px;
   }
 
@@ -185,7 +185,7 @@
 
 @media screen and (min-width: 600px) {
   .order-btn-container {
-    left: 16%;
+    left: 17%;
   }
 }
 
@@ -202,7 +202,7 @@
 
 @media screen and (min-width: 750px) {
   .order-btn-container {
-    left: 9%;
+    left: 12%;
   }
 
   .order-btn {
@@ -213,7 +213,7 @@
 
 @media screen and (min-width: 825px) {
   .order-btn-container {
-    left: 13%;
+    left: 14%;
   }
 }
 
@@ -226,7 +226,7 @@
 
 @media screen and (min-width: 1024px) {
   .order-btn-container {
-    left: 16%;
+    left: 18%;
     bottom: 40px;
   }
 
@@ -238,7 +238,7 @@
 
 @media screen and (min-width: 1150px) {
   .order-btn-container {
-    left: 18%;
+    left: 20%;
     bottom: 50px;
   }
 }
@@ -251,33 +251,34 @@
 
   .order-btn {
     padding: 1rem 8rem;
+    font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 1426px) {
   .order-btn-container {
-    left: 17%;
+    left: 16%;
     bottom: 50px;
   }
 }
 
 @media screen and (min-width: 1528px) {
   .order-btn-container {
-    left: 19%;
+    left: 17%;
     bottom: 70px;
   }
 }
 
 @media screen and (min-width: 1710px) {
   .order-btn-container {
-    left: 20%;
+    left: 19%;
   }
 }
 
 @media screen and (min-width: 1750px) {
   .order-btn-container {
-    left: 21%;
-    bottom: 100px;
+    left: 19%;
+    bottom: 90px;
   }
 }
 

@@ -20,7 +20,7 @@ export default function Home() {
     <div className="relative">
       <Image src={Banner} alt="Home Page Banner" className="object-cover w-full"/>
       <div className="absolute order-btn-container">
-      <button className="order-btn text-sm order-btn rounded-full text-white ">ORDER NOW</button>
+      <a href="https://heylink.me/thewok?fbclid=PAAaYSf8A7ru06PtyFji2jlUjyRlGCMm6042dVv2pJMevReWJ-uf3j0Eae6ko" target="_blank" className="text-sm order-btn rounded-full text-white">ORDER NOW</a>
       </div>
       <div className="hidden xl:flex xl:flex-col xl:fixed xl:bottom-1/2 xl:right-9 z-[80]">
         <a href="https://www.facebook.com/thewoklb" target='_blank' className="inline-block xl:mb-2 2xl:mb-5"><Image src={Facebook} alt="Facebook" /></a>
@@ -64,7 +64,7 @@ export default function Home() {
       <div className=" relative hidden lg:block">
         <>
           <Image src={BuildYourOwnWokBottom} alt="Build Your Own Wok Bottom" className="w-full object-cover" />
-              <div className="absolute bottom-[32%] pl-5 2xl:bottom-[35%] 2xl:pl-12">
+              <div className="absolute bottom-[32%] pl-5 2xl:bottom-[35%] 2xl:pl-8">
                 <div className="text-white">
                   <div className="lg:max-w-xl 2xl:max-w-2xl">
                     <h2 className="lg:text-2xl lg:font-semibold lg:mb-5 2xl:text-5xl 2xl:font-semibold 2xl:mb-10">BUILD YOUR OWN WOK</h2>
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       <Image src={Think} className="hidden lg:block" alt="Think Inside The Box"/>
       </div>
-        <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[33%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[37%] md:left-[17%] lg:left-[25%] lg:top-[30%] xl:top-[36%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[38%] bggersc">
+        <div className="flex flex-col items-center absolute px-10 max-w-[75ch] top-[31%] sm:top-[42%] sm:max-w-[65ch] sm:left-[10%] md:top-[37%] md:left-[17%] lg:left-[25%] lg:top-[30%] xl:top-[36%] xl:left-[28%] 2xl:left-[31%] 2xl:top-[38%] bggersc">
           <div className=" text-center">
           <h2 className=" text-red-800 font-bold text-2xl mb-1 max-w-[14ch] md:text-4xl md:mb-10">THINK INSIDE THE BOX</h2>
           </div>
@@ -101,14 +101,14 @@ export default function Home() {
         <p className="text-white xl:text-xl 2xl:text-2xl">Let's wok and roll.</p>
         </div>
       </div>
-      <div className="max-w-[25rem] 2xl:max-w-full">
-        <Image src={Woked} alt="Woked" className="object-cover" />
+      <div className="max-w-[15rem] mt-5 md:mt-0 md:max-w-[20rem] 2xl:max-w-full">
+        <Image src={Woked} alt="Woked" className="object-cover w-full" />
       </div>
     </div>
 
       {/* Section */}
       <div className="w-full">
-      <Image src={Hungry} alt="Hungry Banner" className="object-cover w-full"/>
+       <Image src={Hungry} alt="Hungry Banner" className="object-cover w-full"/>
       </div>
 
       <Footer />
