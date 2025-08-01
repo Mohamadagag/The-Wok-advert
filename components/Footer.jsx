@@ -1,12 +1,20 @@
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="h-12 bg-red-800 text-white flex items-center justify-center px-4">
+    <footer className="h-12 bg-[#AA1E2E] text-[#FFFCF4] flex items-center justify-center px-4">
       <div className="text-center text-[0.6rem] xl:text-base">
-        Copyright © 2024 The Wok all rights reserved. Powered by&nbsp;<a href="https://advertcommunications.com/" target="_blank" className="hover:underline">Advert Communications</a>
+        Copyright © {currentYear} The Wok all rights reserved. Powered by&nbsp;
+        <a
+          href="https://advertcommunications.com/"
+          target="_blank"
+          className="hover:underline"
+        >
+          Advert Communications
+        </a>
       </div>
-
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

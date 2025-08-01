@@ -24,10 +24,6 @@
   padding: 0.3rem 2rem;
 }
 
-.background-img {
-  background-image: url("../public/bg.png");
-}
-
 .location-height {
   height: calc(100vh - 87px);
 }
@@ -62,13 +58,6 @@
   animation: slide-up 0.5s forwards;
 }
 
-@media screen and (max-width: 1440px) {
-  .message-bg {
-    background-image: url("../public/bg.png");
-    height: auto;
-    padding-bottom: 2rem;
-  }
-}
 
 @media screen and (min-width: 400px) {
   .mobile-margin__h2 {
@@ -284,5 +273,5 @@
 
 .order-btn,
 .primary-btn {
-  background: linear-gradient(to right, #b61414, #500909);
+  background: #aa1e2e;
 }

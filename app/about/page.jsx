@@ -8,7 +8,7 @@ const AboutUs = () => {
     <>
       <SocialMediaIcons />
       <main className=" xl:justify-center px-5 pb-5 pt-16 mt-[93px] xl:mt-[87px] 2xl:flex 2xl:justify-around background-img xl:pt-[100px] xl:px-24">
-        <div className="w-full mx-auto text-white 2xl:w-1/2">
+        <div className="w-full mx-auto text-[#FFFCF4] 2xl:w-1/2">
           <div className="font-bold tracking-wide">
             <h1 className="text-4xl lg:text-5xl">ABOUT <span className="text-[#970000]">US</span></h1>
           </div>
