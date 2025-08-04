@@ -1,6 +1,6 @@
 const TeamCard = () => {
   return (
-    <div className="bg-[#191819] max-h-56 px-5 py-10 text-[#FFFCF4] rounded-2xl max-w-md lg:px-10 2xl:max-w-2xl 2xl:min-h-72">
+    <div className="bg-[#191819] max-h-56 px-5 py-10 text-[#FFFCF4] rounded-2xl max-w-md lg:px-10 2xl:max-w-full 2xl:min-h-72">
       <h1 className="font-bold mb-4 tracking-wide text-2xl 2xl:text-3xl 2xl:mb-8">
         CHEF
       </h1>

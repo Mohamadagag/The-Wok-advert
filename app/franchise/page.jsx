@@ -245,11 +245,11 @@ const FranchisePage = () => {
           <div className="w-full">
             <>
               <form
-                className="text-[#FFFCF4] 2xl:pt-40 2xl:max-w-[35rem] md:w-full pb-10"
+                className="text-[#FFFCF4] 2xl:pt-40 md:w-full pb-10"
                 onSubmit={handleSubmit}
               >
                 <div className="flex flex-col lg:flex-row lg:gap-x-5 mb-2">
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Full Name<span className="text-[#970000]"> *</span>
                     </label>
@@ -263,7 +263,7 @@ const FranchisePage = () => {
                     />
                   </div>
 
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Profession Details
                       <span className="text-[#970000]"> *</span>
@@ -309,7 +309,7 @@ const FranchisePage = () => {
                     />
                     <label
                       htmlFor="uploadBtn"
-                      className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] block"
+                      className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl block"
                     >
                       Upload File
                     </label>
@@ -317,7 +317,7 @@ const FranchisePage = () => {
                 </div>
 
                 <div className="flex flex-col lg:flex-row lg:gap-x-5 mb-2">
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Email<span className="text-[#970000]"> *</span>
                     </label>
@@ -331,7 +331,7 @@ const FranchisePage = () => {
                     />
                   </div>
 
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Phone Number<span className="text-[#970000]"> *</span>
                     </label>
@@ -347,7 +347,7 @@ const FranchisePage = () => {
                 </div>
 
                 <div className="flex flex-col lg:flex-row lg:gap-x-5 mb-2">
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Capital and assets NetWorth
                       <span className="text-[#970000]"> *</span>
@@ -362,7 +362,7 @@ const FranchisePage = () => {
                     />
                   </div>
 
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Country<span className="text-[#970000]"> *</span>
                     </label>
@@ -377,7 +377,7 @@ const FranchisePage = () => {
                   </div>
                 </div>
                 <div className="flex flex-col lg:flex-row lg:gap-x-5 mb-2">
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Type Of Franchise
                       <span className="text-[#970000]"> *</span>
@@ -392,7 +392,7 @@ const FranchisePage = () => {
                     />
                   </div>
 
-                  <div className="mb-5 lg:w-1/2">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Investment<span className="text-[#970000]"> *</span>
                     </label>
