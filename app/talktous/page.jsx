@@ -81,7 +81,7 @@ const feedback = () => {
             <div className="w-full mx-auto">
               <>
                 <form
-                  className="text-[#FFFCF4] 2xl:pt-10 2xl:max-w-[35rem] xl:pr-10 md:w-full"
+                  className="text-[#FFFCF4] 2xl:pt-10 2xl:max-w-[40rem] 2xl:pr-10 md:w-full"
                   onSubmit={handleFeedbackSubmit}
                 >
                   <div className="flex flex-col flex-wrap mb-2 lg:flex-row lg:justify-between lg:max-w-[100%]">
@@ -93,7 +93,7 @@ const feedback = () => {
                         type="text"
                         required
                         placeholder="placeholder"
-                        className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
+                        className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[99%]"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                       />
@@ -201,7 +201,7 @@ const feedback = () => {
 
         {/* MessageUs section */}
 
-        <main className=" px-5 xl:mt-[87px] h-auto xl:px-24 flex justify-center mt-20">
+        <main className=" xl:mt-[87px] h-auto  flex justify-center mt-20 px-6 lg:px-10 xl:px-72">
           <div className="w-full 2xl:w-1/2">
             <form
               className="text-[#FFFCF4] 2xl:pt-10"
