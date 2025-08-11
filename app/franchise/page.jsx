@@ -20,7 +20,7 @@ const FranchisePage = () => {
     setPreviousExperienceWithAFranchiseCompany,
   ] = useState("");
   const [attachment, setAttachment] = useState(null);
-  const [capital, setCapital] = useState(0);
+  const [capital, setCapital] = useState("");
   const [country, setCountry] = useState("");
   const [preQualifications, setPreQualifications] = useState([]); // PRE-QUALIFICATIONS array for
 
@@ -256,7 +256,7 @@ const FranchisePage = () => {
                     <input
                       type="text"
                       required
-                      placeholder="placeholder"
+                      placeholder="Full Name"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
@@ -271,7 +271,7 @@ const FranchisePage = () => {
                     <input
                       type="text"
                       required
-                      placeholder="placeholder"
+                      placeholder="Profession"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={professionalDetail}
                       onChange={(e) => setProfessionalDetail(e.target.value)}
@@ -286,7 +286,7 @@ const FranchisePage = () => {
                     <input
                       type="text"
                       required
-                      placeholder="placeholder"
+                      placeholder="Company Name"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
                       value={companyName}
                       onChange={(e) => setCompanyName(e.target.value)}
@@ -311,7 +311,7 @@ const FranchisePage = () => {
                       htmlFor="uploadBtn"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl block"
                     >
-                      Upload File
+                      Select
                     </label>
                   </div>
                 </div>
@@ -324,26 +324,51 @@ const FranchisePage = () => {
                     <input
                       type="email"
                       required
-                      placeholder="placeholder"
+                      placeholder="Email"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 
-                  <div className="mb-5 lg:w-1/2 2xl:w-full">
+                  <div className="mb-5 lg:w-1/2 2xl:w-full relative">
+                    <label className="block mb-3 text-[#191819]">
+                      Phone Number<span className="text-[#970000]"> *</span>
+                    </label>
+
+                    {/* Wrapper for prefix and input */}
+                    <div className="relative">
+                      {/* Fake placeholder with colored prefix */}
+                      {phoneNumber.length === 0 && (
+                        <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
+                          <span className="text-gray-400">+961 |</span>
+                          <span className="text-[#FFFCF4]"> 00 000 000</span>
+                        </span>
+                      )}
+
+                      <input
+                        type="tel"
+                        required
+                        className="bg-[#171717] pl-5 py-3 rounded-lg w-full text-[#FFFCF4]"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                      />
+                    </div>
+                  </div>
+
+                  {/* <div className="mb-5 lg:w-1/2 2xl:w-full">
                     <label className="block mb-3 text-[#191819]">
                       Phone Number<span className="text-[#970000]"> *</span>
                     </label>
                     <input
                       type="tel"
                       required
-                      placeholder="placeholder"
+                      placeholder="+961 | 00 000 000"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
                     />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex flex-col lg:flex-row lg:gap-x-5 mb-2">
@@ -355,7 +380,7 @@ const FranchisePage = () => {
                     <input
                       type="number"
                       required
-                      placeholder="placeholder"
+                      placeholder="Capital in USD"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={capital}
                       onChange={(e) => setCapital(e.target.value)}
@@ -369,7 +394,7 @@ const FranchisePage = () => {
                     <input
                       type="text"
                       required
-                      placeholder="placeholder"
+                      placeholder="Country"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
@@ -385,7 +410,7 @@ const FranchisePage = () => {
                     <input
                       type="text"
                       required
-                      placeholder="placeholder"
+                      placeholder="Type Of Franchise"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={typeOfFranchise}
                       onChange={(e) => setTypeOfFranchise(e.target.value)}
@@ -399,7 +424,7 @@ const FranchisePage = () => {
                     <input
                       type="text"
                       required
-                      placeholder="placeholder"
+                      placeholder="Investment"
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
                       value={investment}
                       onChange={(e) => setInvestment(e.target.value)}
@@ -416,7 +441,7 @@ const FranchisePage = () => {
                     rows="3"
                     required
                     className="bg-[#171717] placeholder-[#FFFCF4] pl-5 pt-3 mt-3 rounded-2xl block w-full"
-                    placeholder="placeholder"
+                    placeholder="Type Here..."
                     value={previousExperienceWithAFranchiseCompany}
                     onChange={(e) =>
                       setPreviousExperienceWithAFranchiseCompany(e.target.value)

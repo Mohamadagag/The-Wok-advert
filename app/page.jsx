@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import Image1 from "@/public/image1.png";
 import Image2 from "@/public/image2.png";
 import Image3 from "@/public/image3.png";
-import Banner from "@/public/banner.png";
+import Banner from "@/public/banner2.png";
+import MobileBanner from "@/public/banner3.png";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -69,7 +70,7 @@ export default function Home() {
         {/* Secion */}
         <div className="relative flex w-full justify-between items-center px-6 lg:px-10 xl:px-72 py-20 xl:py-36">
           <div>
-            <h1 className="font-extrabold text-[#AA1E2E] text-4xl md:text-[40px] uppercase max-w-[27rem] mb-10">
+            <h1 className="font-bold text-[#AA1E2E] text-4xl md:text-[40px] uppercase max-w-[27rem] mb-10">
               about us
             </h1>
             <p className="mb-10 font-medium text-lg md:text-xl xl:max-w-[30rem] 2xl:max-w-[42rem] text-[#191819]">
@@ -105,8 +106,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Secion */}
-        <div className="relative w-full max-h-[700px] overflow-hidden flex justify-center items-center">
+        {/* Desktop Banner */}
+        <div className="hidden relative w-full max-h-[700px] overflow-hidden lg:flex justify-center items-center">
+          {/* Image */}
           <Image
             src={Banner}
             alt="TheWok Banner"
@@ -114,7 +116,7 @@ export default function Home() {
           />
 
           {/* Overlayed content */}
-          <div className="absolute bottom-[60px] w-full px-6 lg:px-10 xl:px-72">
+          <div className="absolute top-1/2 w-full px-6 lg:px-10 xl:px-72 -translate-y-1/2">
             <div className="max-w-[48rem]">
               <h1 className="md:text-5xl mb-6 text-[#FFFCF4] uppercase font-extrabold text-6xl max-w-[27rem]">
                 think inside the box
@@ -124,6 +126,33 @@ export default function Home() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
               <button className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold text-2xl">
+                ORDER NOW
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Banner */}
+
+        <div className="lg:hidden relative w-full max-h-[700px] overflow-hidden flex justify-center items-center">
+          <div className="w-full h-full">
+            <Image
+              src={MobileBanner}
+              alt="TheWok Banner"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="absolute top-1/2 w-full px-6 lg:px-10  -translate-y-1/2">
+            <div className="max-w-[48rem]">
+              <h1 className="text-xl max-w-44 sm:text-2xl md:max-w-[25rem] md:text-5xl mb-2 md:mb-6 text-[#FFFCF4] uppercase font-extrabold">
+                think inside the box
+              </h1>
+              <p className="text-[#FFFCF4] font-medium text-xs sm:text-base sm:max-w-80 md:text-lg mb-5 max-w-56 md:max-w- md:max-w-[27rem]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <button className="bg-[#AA1E2E] text-[#FFFCF4] py-1 px-2 md:py-3 md:px-8 md:text-base rounded-lg font-bold text-sm">
                 ORDER NOW
               </button>
             </div>

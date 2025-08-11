@@ -74,7 +74,7 @@ const feedback = () => {
               </h1>
               <h2 className="text-6xl  lg:text-7xl text-[#970000]">FEEDBACK</h2>
             </div>
-            <p className="mt-10 text-xl font-light max-w-[55ch] mb-5 text-[#191819]">
+            <p className="mt-10 text-xl font-normal max-w-[55ch] mb-5 text-[#191819]">
               Our aim is to grant you an outstanding your Experience! Let us
               know how we're doing.
             </p>
@@ -92,14 +92,14 @@ const feedback = () => {
                       <input
                         type="text"
                         required
-                        placeholder="placeholder"
-                        className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[99%]"
+                        placeholder="Full Name"
+                        className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                       />
                     </div>
 
-                    <div className="mb-5 lg:w-1/2 ">
+                    <div className="mb-5 lg:w-1/2">
                       <label className="block mb-3 text-[#191819]">
                         Profession Details
                         <span className="text-[#970000]"> *</span>
@@ -107,7 +107,7 @@ const feedback = () => {
                       <input
                         type="text"
                         required
-                        placeholder="placeholder"
+                        placeholder="Profession"
                         className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
                         value={professionalDetail}
                         onChange={(e) => setprofessionalDetail(e.target.value)}
@@ -123,14 +123,38 @@ const feedback = () => {
                       <input
                         type="email"
                         required
-                        placeholder="placeholder"
+                        placeholder="Email Address"
                         className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
 
-                    <div className="mb-5 lg:w-1/2 ">
+                    <div className="mb-5 lg:w-1/2 relative">
+                      <label className="block mb-3 text-[#191819]">
+                        Phone Number<span className="text-[#970000]"> *</span>
+                      </label>
+
+                      <div className="relative">
+                        {/* Custom colored placeholder */}
+                        {phoneNumber.length === 0 && (
+                          <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
+                            <span className="text-gray-400">+961 |</span>
+                            <span className="text-[#FFFCF4]"> 00 000 000</span>
+                          </span>
+                        )}
+
+                        <input
+                          type="tel"
+                          required
+                          className="bg-[#171717] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] text-[#FFFCF4]"
+                          value={phoneNumber}
+                          onChange={(e) => setPhoneNumber(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    {/* <div className="mb-5 lg:w-1/2 ">
                       <label className="block mb-3 text-[#191819]">
                         Phone Number<span className="text-[#970000]"> *</span>
                       </label>
@@ -142,7 +166,7 @@ const feedback = () => {
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                       />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="max-w-5xl lg:max-w-[100%] mb-5">
@@ -154,7 +178,7 @@ const feedback = () => {
                       rows="5"
                       required
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 pt-3 mt-3 rounded-2xl block w-full "
-                      placeholder="placeholder"
+                      placeholder="Type Here"
                       value={recommendation}
                       onChange={(e) => setRecommendation(e.target.value)}
                     />
@@ -168,7 +192,7 @@ const feedback = () => {
                       rows="5"
                       required
                       className="bg-[#171717] placeholder-[#FFFCF4] pl-5 pt-3 mt-3 rounded-2xl block w-full"
-                      placeholder="placeholder"
+                      placeholder="Type Here"
                       value={yourExperience}
                       onChange={(e) => setYourExperience(e.target.value)}
                     />
@@ -219,14 +243,38 @@ const feedback = () => {
                   <input
                     required
                     type="text"
-                    placeholder="placeholder"
+                    placeholder="Full Name"
                     className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
                     value={msgFullName}
                     onChange={(e) => setMsgFullName(e.target.value)}
                   />
                 </div>
 
-                <div className="mb-5 lg:w-1/3">
+                <div className="mb-5 lg:w-1/3 relative">
+                  <label className="block mb-3 text-[#191819]">
+                    Phone Number<span className="text-[#970000]"> *</span>
+                  </label>
+
+                  <div className="relative">
+                    {/* Custom colored placeholder */}
+                    {msgPhoneNumber.length === 0 && (
+                      <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
+                        <span className="text-gray-400">+961 |</span>
+                        <span className="text-[#FFFCF4]"> 00 000 000</span>
+                      </span>
+                    )}
+
+                    <input
+                      type="tel"
+                      required
+                      className="bg-[#171717] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%] text-[#FFFCF4]"
+                      value={msgPhoneNumber}
+                      onChange={(e) => setMsgPhoneNumber(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                {/* <div className="mb-5 lg:w-1/3">
                   <label className="block mb-3 text-[#191819]">
                     Phone Number<span className="text-[#970000]"> *</span>
                   </label>
@@ -238,7 +286,7 @@ const feedback = () => {
                     value={msgPhoneNumber}
                     onChange={(e) => setMsgPhoneNumber(e.target.value)}
                   />
-                </div>
+                </div> */}
 
                 <div className="lg:w-1/3">
                   <label className="block mb-3 text-[#191819]">
@@ -247,7 +295,7 @@ const feedback = () => {
                   <input
                     type="email"
                     required
-                    placeholder="placeholder"
+                    placeholder="Email Address"
                     className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
                     value={msgEmail}
                     onChange={(e) => setMsgEmail(e.target.value)}
@@ -264,7 +312,7 @@ const feedback = () => {
                   rows="6"
                   required
                   className="bg-[#171717] placeholder-[#FFFCF4] pl-5 pt-3 mt-3 rounded-2xl block w-full"
-                  placeholder="placeholder"
+                  placeholder="Type Here"
                   value={msgRecommendation}
                   onChange={(e) => setMsgRecommendation(e.target.value)}
                 />
