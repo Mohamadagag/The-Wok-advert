@@ -28,9 +28,13 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             </p>
-            <button className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold  text-xl md:text-2xl">
+            <a
+              href="https://thewoklb.com/"
+              target="_blank"
+              className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold  text-xl md:text-2xl"
+            >
               ORDER NOW
-            </button>
+            </a>
           </div>
           <div>
             <Image
@@ -125,9 +129,13 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
-              <button className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold text-2xl">
+              <a
+                href="https://thewoklb.com/"
+                target="_blank"
+                className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold text-2xl"
+              >
                 ORDER NOW
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -152,9 +160,13 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <button className="bg-[#AA1E2E] text-[#FFFCF4] py-1 px-2 md:py-3 md:px-8 md:text-base rounded-lg font-bold text-sm">
+              <a
+                href="https://thewoklb.com/"
+                target="_blank"
+                className="bg-[#AA1E2E] text-[#FFFCF4] py-1 px-2 md:py-3 md:px-8 md:text-base rounded-lg font-bold text-sm"
+              >
                 ORDER NOW
-              </button>
+              </a>
             </div>
           </div>
         </div>

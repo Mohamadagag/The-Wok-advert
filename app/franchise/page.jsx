@@ -22,7 +22,7 @@ const FranchisePage = () => {
   const [attachment, setAttachment] = useState(null);
   const [capital, setCapital] = useState("");
   const [country, setCountry] = useState("");
-  const [preQualifications, setPreQualifications] = useState([]); // PRE-QUALIFICATIONS array for
+  const [preQualifications, setPreQualifications] = useState([]);
 
   const [isCheckedFirst, setIsCheckedFirst] = useState(false);
   const [isCheckedSecond, setIsCheckedSecond] = useState(false);
@@ -355,20 +355,6 @@ const FranchisePage = () => {
                       />
                     </div>
                   </div>
-
-                  {/* <div className="mb-5 lg:w-1/2 2xl:w-full">
-                    <label className="block mb-3 text-[#191819]">
-                      Phone Number<span className="text-[#970000]"> *</span>
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+961 | 00 000 000"
-                      className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full"
-                      value={phoneNumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
-                    />
-                  </div> */}
                 </div>
 
                 <div className="flex flex-col lg:flex-row lg:gap-x-5 mb-2">

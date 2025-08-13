@@ -274,20 +274,6 @@ const feedback = () => {
                   </div>
                 </div>
 
-                {/* <div className="mb-5 lg:w-1/3">
-                  <label className="block mb-3 text-[#191819]">
-                    Phone Number<span className="text-[#970000]"> *</span>
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="placeholder"
-                    className="bg-[#171717] placeholder-[#FFFCF4] pl-5 py-3 rounded-lg w-full max-w-5xl lg:max-w-[98%] 2xl:max-w-[95%]"
-                    value={msgPhoneNumber}
-                    onChange={(e) => setMsgPhoneNumber(e.target.value)}
-                  />
-                </div> */}
-
                 <div className="lg:w-1/3">
                   <label className="block mb-3 text-[#191819]">
                     Email<span className="text-[#970000]"> *</span>
