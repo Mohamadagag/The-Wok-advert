@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Image1 from "@/public/image1.png";
-import Image2 from "@/public/image2.png";
 import Image3 from "@/public/image3.png";
 import Banner from "@/public/banner2.png";
 import MobileBanner from "@/public/banner3.png";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 import Breadcrumb from "@/components/Breadcrumb";
+
+import Wings from "@/public/wings.png";
+import Shrimp from "@/public/shrimp.png";
+import Burger from "@/public/burger.png";
+import Crab from "@/public/crab.png";
+
+import Banner2 from "@/public/homepagebanner2.png";
+import Whatsnew from "@/public/whatsnew.png";
 
 export default function Home() {
   return (
@@ -19,115 +26,167 @@ export default function Home() {
         <SocialMediaIcons />
 
         {/* Secion */}
-        <div className="flex w-full justify-between items-center px-6 lg:px-10 xl:px-72">
+        <div className="custom2:h-[400px] xl:h-[400px] 2xl:h-[600px] flex w-full justify-between items-center px-6 lg:px-10 xl:px-72">
           <div className="pb-5">
-            <h1 className="font-extrabold text-5xl md:text-6xl uppercase max-w-[27rem] mb-10">
-              think inside the box
+            <h1 className="font-extrabold text-4xl md:text-6xl uppercase max-w-96 md:max-w-[27rem] mb-10">
+              download the app
             </h1>
-            <p className="mb-10 font-medium text-[#191819] text-xl md:text-2xl max-w-[42rem] text-[24px]">
+            <p className="mb-10 font-medium text-[#191819] text-xl md:text-2xl lg:max-w-[33rem] xl:max-w-[42rem] text-[24px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <a
               href="https://thewoklb.com/"
               target="_blank"
-              className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold  text-xl md:text-2xl"
+              className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold  text-lg md:text-2xl"
             >
-              ORDER NOW
+              DOWNLOAD APP
             </a>
           </div>
-          <div>
+          <div className="absolute right-0 2xl:-top-3 lg:-top-4 custom2:top-1 lg:max-w-[30rem] custom2:max-w-[30rem] 2xl:max-w-[45rem]">
             <Image
-              className="hidden md:block"
+              className="hidden lg:block"
               src={Image1}
               alt="TheWok Image1"
             />
           </div>
         </div>
 
-        {/* Secion */}
-        <div className="h-[500px] bg-[#191819] flex justify-between items-center py-5 px-6 lg:px-10 xl:px-72">
-          <div className="hidden lg:block">
-            <Image src={Image2} alt="TheWok Image2" />
+
+      <div className="flex items-center justify-center px-6 lg:px-10 xl:px-72 pt-60 pb-32">
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-40 lg:gap-8 custom3:gap-36 text-center "> 
+          <div className="relative bg-[#191819] rounded-2xl py-8 px-6 flex flex-col items-center text-[#FFFCF4]">
+            <div className="absolute -top-36">
+              <Image
+                src={Shrimp}
+                alt="Wings"
+                width={200}
+                height={200}
+                className="object-contain"
+              />
+            </div>
+
+            <div className="mt-14">
+              <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">Noodles</h3>
+              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4] py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
+            </div>
           </div>
-          <div className="lg:max-w-[40rem] ">
-            <h2 className="text-[#AA1E2E] font-bold text-4xl md:text-[40px] mb-4 uppercase">
-              Our Story
+
+                <div className="relative bg-[#191819] rounded-2xl py-8 px-6 flex flex-col items-center text-[#FFFCF4]">
+            <div className="absolute -top-[7.5rem]">
+              <Image
+                src={Crab}
+                alt="Wings"
+                width={200}
+                height={200}
+                className="object-contain"
+              />
+            </div>
+
+           <div className="mt-14">
+              <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">bowls</h3>
+              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4]  py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
+
+            </div>
+          </div>
+
+                <div className="relative bg-[#191819] rounded-2xl py-8 px-6 flex flex-col items-center text-[#FFFCF4]">
+            <div className="absolute -top-[5.5rem]">
+              <Image
+                src={Burger}
+                alt="Wings"
+                width={200}
+                height={200}
+                className="object-contain"
+              />
+            </div>
+
+           <div className="mt-14">
+              <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">sliders</h3>
+              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4]  py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
+
+            </div>
+          </div>
+
+                <div className="relative bg-[#191819] rounded-2xl py-8 px-6 flex flex-col items-center text-[#FFFCF4]">
+            <div className="absolute -top-32">
+              <Image
+                src={Wings}
+                alt="Wings"
+                width={200}
+                height={200}
+                className="object-contain"
+              />
+            </div>
+
+             <div className="mt-14">
+              <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">appetizers</h3>
+              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4]  py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div className="max-w-[100rem] mx-auto px-10 mb-40">
+      <Image src={Banner2} alt="TheWok Banner2" className="w-full h-auto object-cover"/>
+    </div>
+
+    <div className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-10 xl:px-72 py-16 bg-[#AA1E2E]">
+          <div className="lg:max-w-lg z-10">
+            <h2 className="text-3xl md:text-4xl font-black uppercase mb-4 text-[#FFFCF4]">
+              whats new
             </h2>
-            <p className="text-[#FFFCF4] font-medium mb-4 text-lg md:text-xl">
-              Welcome to The Wok, where we're flipping the script on Asian
-              cuisine in Lebanon.
+            <p className="text-base text-justify font-medium mb-6 text-[#FFFCF4]">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
-            <p className="text-[#FFFCF4] font-medium mb-4 text-lg md:text-xl">
-              We're not your average spot – we're the trendsetters, bringing
-              that authentic street food experience straight to your taste buds.
-            </p>
-            <p className="text-[#FFFCF4] font-medium text-lg md:text-xl">
-              We're all about quality and flavor, using only the freshest
-              ingredients and staying true to Asian culinary traditions. Each
-              bite is a burst of excitement that'll have you hooked from the
-              first taste.
-            </p>
+             <p className="text-base text-justify font-medium mb-10 text-[#FFFCF4]">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.             
+              </p>
+            <a  href="https://thewoklb.com/" 
+            target="_blank"
+             className="py-3 px-8 rounded-lg font-bold  text-xl md:text-2xl bg-[#191819] text-[#FFFCF4] hover:opacity-90 transition">
+              ORDER NOW
+            </a>
           </div>
-        </div>
 
-        {/* Secion */}
-        <div className="relative flex w-full justify-between items-center px-6 lg:px-10 xl:px-72 py-20 xl:py-36">
-          <div>
-            <h1 className="font-bold text-[#AA1E2E] text-4xl md:text-[40px] uppercase max-w-[27rem] mb-10">
-              about us
-            </h1>
-            <p className="mb-10 font-medium text-lg md:text-xl xl:max-w-[30rem] 2xl:max-w-[42rem] text-[#191819]">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
 
-            <p className="mb-10 font-medium text-lg md:text-xl xl:max-w-[30rem] 2xl:max-w-[42rem] text-[#191819]">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
-            </p>
+           {/* xl:right-56 */}
 
-            <p className="mb-10 font-medium text-lg md:text-xl xl:max-w-[30rem] 2xl:max-w-[42rem] text-[#191819]">
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam
-              corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-              consequatur?
-            </p>
-
-            <p className="font-medium text-lg md:text-xl xl:max-w-[30rem] 2xl:max-w-[42rem] text-[#191819]">
-              Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-              esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-              fugiat quo voluptas nulla pariatur?
-            </p>
+          {/* Image shown only on large screens */}
+         <div className="hidden lg:block absolute -top-14 lg:right-8 2xl:right-56 ">
+          <div className="w-56 md:w-72 lg:w-[500px] xl:w-[550px] 2xl:w-[650px]">
+            <Image
+              src={Whatsnew}
+              alt="Dish"
+              className="w-full h-auto object-contain"
+            />
           </div>
-          <div className="absolute right-0 top-0 hidden xl:block xl:max-w-[33rem] 2xl:max-w-full">
-            <Image src={Image3} alt="TheWok Image3" />
-          </div>
-        </div>
+         </div>
+    </div>
 
         {/* Desktop Banner */}
         <div className="hidden relative w-full max-h-[700px] overflow-hidden lg:flex justify-center items-center">
-          {/* Image */}
           <Image
             src={Banner}
             alt="TheWok Banner"
             className="h-auto w-full object-contain"
           />
 
-          {/* Overlayed content */}
           <div className="absolute top-1/2 w-full px-6 lg:px-10 xl:px-72 -translate-y-1/2">
             <div className="max-w-[48rem]">
-              <h1 className="md:text-5xl mb-6 text-[#FFFCF4] uppercase font-extrabold text-6xl max-w-[27rem]">
+              <h1 className="text-5xl md:text-6xl mb-6 text-[#FFFCF4] uppercase font-extrabold max-w-[27rem]">
                 think inside the box
               </h1>
-              <p className="text-[#FFFCF4] font-medium text-2xl mb-11 max-w-[40rem]">
+              {/* md:text-2xl lg:max-w-[33rem] xl:max-w-[42rem] text-[24px] */}
+              <p className="md: lg:max-w-[33rem] xl:max-w-[42rem] text-[24px] text-[#FFFCF4] font-medium mb-11 max-w-[40rem]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <a
                 href="https://thewoklb.com/"
@@ -141,7 +200,6 @@ export default function Home() {
         </div>
 
         {/* Mobile Banner */}
-
         <div className="lg:hidden relative w-full max-h-[700px] overflow-hidden flex justify-center items-center">
           <div className="w-full h-full">
             <Image
@@ -153,7 +211,7 @@ export default function Home() {
 
           <div className="absolute top-1/2 w-full px-6 lg:px-10  -translate-y-1/2">
             <div className="max-w-[48rem]">
-              <h1 className="text-xl max-w-44 sm:text-2xl md:max-w-[25rem] md:text-5xl mb-2 md:mb-6 text-[#FFFCF4] uppercase font-extrabold">
+              <h1 className="text-2xl max-w-52 sm:text-2xl md:max-w-[25rem] md:text-5xl mb-2 md:mb-6 text-[#FFFCF4] uppercase font-extrabold">
                 think inside the box
               </h1>
               <p className="text-[#FFFCF4] font-medium text-xs sm:text-base sm:max-w-80 md:text-lg mb-5 max-w-56 md:max-w- md:max-w-[27rem]">
@@ -163,7 +221,7 @@ export default function Home() {
               <a
                 href="https://thewoklb.com/"
                 target="_blank"
-                className="bg-[#AA1E2E] text-[#FFFCF4] py-1 px-2 md:py-3 md:px-8 md:text-base rounded-lg font-bold text-sm"
+                className="bg-[#AA1E2E] text-[#FFFCF4] py-2 px-4 md:py-3 md:px-8 md:text-base rounded-lg font-bold"
               >
                 ORDER NOW
               </a>
@@ -171,7 +229,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer bgColor="bg-[#191819]" />
     </>
   );
 }
