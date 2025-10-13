@@ -15,6 +15,11 @@ import Crab from "@/public/crab.png";
 import Banner2 from "@/public/homepagebanner2.png";
 import Whatsnew from "@/public/whatsnew.png";
 
+import { FaApple } from "react-icons/fa6";
+import { FaAndroid } from "react-icons/fa";
+
+
+
 export default function Home() {
   return (
     <>
@@ -35,13 +40,24 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            <div className="flex flex-col md:flex-row max-w-60 md:max-w-full">
             <a
-              href="https://thewoklb.com/"
+              href="https://apps.apple.com/app/id6749677711"
               target="_blank"
-              className="bg-[#AA1E2E] text-[#FFFCF4] py-3 px-8 rounded-lg font-bold  text-lg md:text-2xl"
+              className="mb-5 md:mb-0 md:mr-5 flex items-center bg-[#AA1E2E] text-[#FFFCF4] py-3 px-12 rounded-lg font-bold  text-lg md:text-2xl"
             >
-              DOWNLOAD APP
+              GET APP <FaApple className="ml-4 text-4xl" />
             </a>
+
+               <a
+              href="https://play.google.com/store/apps/details?id=com.weevi.thewok"
+              target="_blank"
+              className="flex items-center bg-[#AA1E2E] text-[#FFFCF4] py-3 px-12 rounded-lg font-bold  text-lg md:text-2xl"
+            >
+              GET APP <FaAndroid className="ml-4 text-4xl" />
+            </a>
+
+            </div>
           </div>
           <div className="absolute right-0 2xl:-top-3 lg:-top-4 custom2:top-1 lg:max-w-[30rem] custom2:max-w-[30rem] 2xl:max-w-[45rem]">
             <Image
