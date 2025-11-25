@@ -205,33 +205,28 @@ const FranchisePage = () => {
           <div>
             <ul className="leading-relaxed text-[#191819] xl:max-w-[35rem] list-disc pl-6">
               <li className="mb-3 font-medium text-[#191819]">
-                Passion for the industry and strong belief in our concept
+                  Passion for the industry and a strong belief in our concept.
               </li>
               <li className="mb-3 font-medium text-[#191819]">
-                Willingness and ability to open multiple units over a defined
-                period of time in a specific geographical area
+                  Willingness and ability to open multiple units within a defined period of time in a specific geographical area.
               </li>
               <li className="mb-3 font-medium text-[#191819]">
-                Minimum liquidity to open and operate specified number of units
-                over a defined period of time in a specific geographical area
+                Minimum liquidity required to open and operate a specified number of units over a defined period of time in a specific geographical area
               </li>
               <li className="mb-3 font-medium text-[#191819]">
-                Willingness and ability to issue bank guarantee in case needed
+                Willingness and ability to provide a bank guarantee if needed.
               </li>
               <li className="mb-3 font-medium text-[#191819]">
-                5 years experience in Food & Beverage services/Restaurant sector
+               Minimum of 5 years’ experience in the Food & Beverage services or restaurant sector.
               </li>
               <li className="mb-3 font-medium text-[#191819]">
-                Proven record of having developed or operated multi unit
-                concepts
+               Proven track record of developing or operating multi-unit concepts.
               </li>
               <li className="mb-3 font-medium text-[#191819]">
-                Ability to establish an infrastructure dedicated to the
-                development of our brand
+               Ability to establish an infrastructure dedicated to the development of our brand.
               </li>
               <li className="font-medium text-[#191819]">
-                Local knowledge and expertise in the areas of real estate,
-                government regulations, labor law and supply chain
+                Local knowledge and expertise in real estate, government regulations, labor law, and supply chain management.
               </li>
             </ul>
           </div>
@@ -459,7 +454,7 @@ const FranchisePage = () => {
                     } flex items-center justify-center w-full text-[#FFFCF4] bg-[#171717] placeholder-[#FFFCF4] p-2 rounded-lg hover:cursor-pointer sm:text-text-lg mb-5`}
                   >
                     <label className="text-sm text-center md:text-base hover:cursor-pointer">
-                      I am seeking a multi-unit opportunity
+                      I am seeking a multi-unit opportunity.
                     </label>
                   </div>
 
@@ -470,7 +465,7 @@ const FranchisePage = () => {
                     } flex items-center justify-center w-full text-[#FFFCF4] bg-[#171717] placeholder-[#FFFCF4] p-2 rounded-lg hover:cursor-pointer sm:text-text-lg mb-5`}
                   >
                     <label className="text-sm text-center md:text-base hover:cursor-pointer">
-                      I have restaurant business experience
+                      I have experience in the restaurant business.
                     </label>
                   </div>
 
@@ -481,7 +476,7 @@ const FranchisePage = () => {
                     } flex items-center justify-center w-full text-[#FFFCF4] bg-[#171717] placeholder-[#FFFCF4] p-2 rounded-lg hover:cursor-pointer sm:text-text-lg mb-5`}
                   >
                     <label className="text-sm text-center md:text-base hover:cursor-pointer">
-                      I, or one of my partners, has QSR Restaurant Experience
+                      I, or one of my partners, have QSR experience.
                     </label>
                   </div>
 
@@ -492,7 +487,7 @@ const FranchisePage = () => {
                     } flex items-center justify-center w-full text-[#FFFCF4] bg-[#171717] placeholder-[#FFFCF4] p-2 rounded-lg hover:cursor-pointer sm:text-text-lg mb-5`}
                   >
                     <label className="text-sm text-center md:text-base hover:cursor-pointer">
-                      I currently am (or have previously been) a business owner
+                      I am currently, or have previously been, a business owner.
                     </label>
                   </div>
 
@@ -503,7 +498,7 @@ const FranchisePage = () => {
                     } flex items-center justify-center w-full text-[#FFFCF4] bg-[#171717] placeholder-[#FFFCF4] p-2 rounded-lg hover:cursor-pointer sm:text-text-lg mb-5`}
                   >
                     <label className="text-sm text-center md:text-base hover:cursor-pointer">
-                      I am currently a multi-unit franchise
+                      I am currently a multi-unit franchisee.
                     </label>
                   </div>
                 </div>

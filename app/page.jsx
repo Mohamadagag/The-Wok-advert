@@ -34,11 +34,10 @@ export default function Home() {
         <div className="custom2:h-[400px] xl:h-[400px] 2xl:h-[600px] flex w-full justify-between items-center px-6 lg:px-10 xl:px-72">
           <div className="pb-5">
             <h1 className="font-extrabold text-4xl md:text-6xl uppercase max-w-96 md:max-w-[27rem] mb-10">
-              download the app
+              Get the App Now
             </h1>
             <p className="mb-10 font-medium text-[#191819] text-xl md:text-2xl lg:max-w-[33rem] xl:max-w-[42rem] text-[24px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Get your Wok favorites in just a few taps! Download the app and enjoy an exclusive 30% discount on your first order.
             </p>
             <div className="flex flex-col md:flex-row max-w-60 md:max-w-full">
             <a
@@ -84,7 +83,7 @@ export default function Home() {
 
             <div className="mt-14">
               <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">Noodles</h3>
-              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className="text-base mb-8 font-medium">Saucy and bursting with flavor in every bite.</p>
               <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4] py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
             </div>
           </div>
@@ -102,7 +101,7 @@ export default function Home() {
 
            <div className="mt-14">
               <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">bowls</h3>
-              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className="text-base mb-8 font-medium">Loaded and crafted to satisfy every craving.</p>
               <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4]  py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
 
             </div>
@@ -121,7 +120,7 @@ export default function Home() {
 
            <div className="mt-14">
               <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">sliders</h3>
-              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className="text-base mb-8 font-medium">Flavorful and crafted to delight every bite.</p>
               <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4]  py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
 
             </div>
@@ -140,7 +139,7 @@ export default function Home() {
 
              <div className="mt-14">
               <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase">appetizers</h3>
-              <p className="text-base mb-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className="text-base mb-8 font-medium">Crispy and made to kickstart your Wok craving.</p>
               <a target="_blank" href="https://thewoklb.com/" className="block w-full text-center bg-[#AA1E2E] text-[#FFFCF4]  py-2 rounded-md hover:opacity-90 text-xl md:text-2xl font-bold uppercase">Order Now </a>
 
             </div>
@@ -156,13 +155,13 @@ export default function Home() {
     <div className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-10 xl:px-72 py-16 bg-[#AA1E2E]">
           <div className="lg:max-w-lg z-10">
             <h2 className="text-3xl md:text-4xl font-black uppercase mb-4 text-[#FFFCF4]">
-              whats new
+              Taste What’s New
             </h2>
             <p className="text-base text-justify font-medium mb-6 text-[#FFFCF4]">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+              The new menu items are here and ready to wow your taste buds! Bold flavors and exciting combinations are waiting for you at The Wok. Every bite is an adventure, with surprises that make each dish unforgettable.
+             </p>
              <p className="text-base text-justify font-medium mb-10 text-[#FFFCF4]">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.             
+                Don’t miss out, come explore our latest creations and see what’s fresh, fun, and completely irresistible!             
               </p>
             <a  href="https://thewoklb.com/" 
             target="_blank"
@@ -201,8 +200,7 @@ export default function Home() {
               </h1>
               {/* md:text-2xl lg:max-w-[33rem] xl:max-w-[42rem] text-[24px] */}
               <p className="md: lg:max-w-[33rem] xl:max-w-[42rem] text-[24px] text-[#FFFCF4] font-medium mb-11 max-w-[40rem]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                From the first bite to the last, we serve up comfort that’s always fresh and full of flavor. Inspired by the soul of the Asian kitchen, every dish is made to delight. Whether you’re here for a quick craving or a new favorite, our wok is always ready for you.
               </p>
               <a
                 href="https://thewoklb.com/"
@@ -231,8 +229,7 @@ export default function Home() {
                 think inside the box
               </h1>
               <p className="text-[#FFFCF4] font-medium text-xs sm:text-base sm:max-w-80 md:text-lg mb-5 max-w-56 md:max-w- md:max-w-[27rem]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                From the first bite to the last, we serve up comfort that’s always fresh and full of flavor. Inspired by the soul of the Asian kitchen, every dish is made to delight. Whether you’re here for a quick craving or a new favorite, our wok is always ready for you.
               </p>
               <a
                 href="https://thewoklb.com/"

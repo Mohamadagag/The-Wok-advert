@@ -75,8 +75,7 @@ const feedback = () => {
               <h2 className="text-6xl  lg:text-7xl text-[#970000]">FEEDBACK</h2>
             </div>
             <p className="mt-10 text-xl font-normal max-w-[55ch] mb-5 text-[#191819]">
-              Our aim is to grant you an outstanding your Experience! Let us
-              know how we're doing.
+              Our aim is to provide you with an outstanding experience! We’d love to hear your thoughts and ensure every moment with us exceeds your expectations
             </p>
             <div className="w-full mx-auto">
               <>
@@ -185,7 +184,7 @@ const feedback = () => {
                   </div>
                   <div className="max-w-5xl lg:max-w-[100%]">
                     <label className="text-[#191819]">
-                      How was your your experience at The Wok?
+                      How was your experience at The Wok?
                       <span className="text-[#970000]"> *</span>
                     </label>
                     <textarea
@@ -291,7 +290,7 @@ const feedback = () => {
 
               <div className="max-w-5xl lg:max-w-[100%]">
                 <label className="text-[#191819]">
-                  Share with us new item recommendations to be added to our menu
+                  Please share your recommendations for new items to be added to our menu
                   <span className="text-[#970000]"> *</span>
                 </label>
                 <textarea
