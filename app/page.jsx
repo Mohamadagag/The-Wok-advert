@@ -170,9 +170,6 @@ export default function Home() {
             </a>
           </div>
 
-
-           {/* xl:right-56 */}
-
           {/* Image shown only on large screens */}
          <div className="hidden lg:block absolute -top-14 lg:right-8 2xl:right-56 ">
           <div className="w-56 md:w-72 lg:w-[500px] xl:w-[550px] 2xl:w-[650px]">
@@ -198,9 +195,8 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl mb-6 text-[#FFFCF4] uppercase font-extrabold max-w-[27rem]">
                 think inside the box
               </h1>
-              {/* md:text-2xl lg:max-w-[33rem] xl:max-w-[42rem] text-[24px] */}
               <p className="md: lg:max-w-[33rem] xl:max-w-[42rem] text-[24px] text-[#FFFCF4] font-medium mb-11 max-w-[40rem]">
-                From the first bite to the last, we serve up comfort that’s always fresh and full of flavor. Inspired by the soul of the Asian kitchen, every dish is made to delight. Whether you’re here for a quick craving or a new favorite, our wok is always ready for you.
+                From the first bite to the last, we serve comfort that’s always fresh and full of flavor. Inspired by the soul of the Asian kitchen, every dish is made to delight, whether it’s a quick craving or a new favorite.
               </p>
               <a
                 href="https://thewoklb.com/"
@@ -228,8 +224,8 @@ export default function Home() {
               <h1 className="text-2xl max-w-52 sm:text-2xl md:max-w-[25rem] md:text-5xl mb-2 md:mb-6 text-[#FFFCF4] uppercase font-extrabold">
                 think inside the box
               </h1>
-              <p className="text-[#FFFCF4] font-medium text-xs sm:text-base sm:max-w-80 md:text-lg mb-5 max-w-56 md:max-w- md:max-w-[27rem]">
-                From the first bite to the last, we serve up comfort that’s always fresh and full of flavor. Inspired by the soul of the Asian kitchen, every dish is made to delight. Whether you’re here for a quick craving or a new favorite, our wok is always ready for you.
+              <p className="text-[#FFFCF4] font-medium text-xs sm:text-base sm:max-w-80 md:text-lg mb-5 max-w-64 md:max-w- md:max-w-[27rem]">
+                From the first bite to the last, we serve comfort that’s always fresh and full of flavor. Inspired by the soul of the Asian kitchen, every dish is made to delight, whether it’s a quick craving or a new favorite.
               </p>
               <a
                 href="https://thewoklb.com/"

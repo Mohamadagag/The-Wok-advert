@@ -169,9 +169,7 @@ const feedback = () => {
                   </div>
 
                   <div className="max-w-5xl lg:max-w-[100%] mb-5">
-                    <label className="text-[#191819]">
-                      Share with us new item recommendations to be added to our
-                      menu<span className="text-[#970000]"> *</span>
+                    <label className="text-[#191819]">Please share your recommendations for new items to be added to our menu<span className="text-[#970000]"> *</span>
                     </label>
                     <textarea
                       rows="5"
